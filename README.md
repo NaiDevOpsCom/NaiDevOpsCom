@@ -48,6 +48,7 @@ Social events: Non-technical events that allow members of the community to get t
  - Whatsapp group: https://chat.whatsapp.com/KhRvmfhRB6S5TdRdSxqXcU
  - Linkedin: https://www.linkedin.com/groups/9351099
  - Discord: https://discord.gg/hWzVZqJ6Dw
+ - Twitter: https://twitter.com/nairobidevops
 
 ## Code of Conduct
 Respect: Treat all members of the community with respect and professionalism, regardless of their background, identity, or views.
