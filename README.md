@@ -44,7 +44,10 @@ Community projects: Collaborative projects within the community that demonstrate
 Social events: Non-technical events that allow members of the community to get to know each other on a more personal level and build stronger relationships.
 
 ## How to reach us
- - devops.nairobi.community@gmail.com
+ - Email: devops.nairobi.community@gmail.com
+ - Whatsapp group: https://chat.whatsapp.com/KhRvmfhRB6S5TdRdSxqXcU
+ - Linkedin: https://www.linkedin.com/groups/9351099
+ - Discord: https://discord.gg/hWzVZqJ6Dw
 
 ## Code of Conduct
 Respect: Treat all members of the community with respect and professionalism, regardless of their background, identity, or views.
