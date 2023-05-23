@@ -17,6 +17,7 @@ Here are some ideas to get you started:
 
 ## NAIROBI DEVOPS COMMUNITY 
 
+
 ## Mission
 We strive to promote collaboration, innovation, and best practices within the DevOps industry in Nairobi. Our mission is to create a supportive and inclusive community that values diversity and fosters learning and growth. We organize regular events, such as meetups, workshops, and talks, that provide valuable insights, practical skills, and networking opportunities. Our mission is to empower members to excel in their careers and to create a thriving DevOps community in Nairobi. We promote the values of continuous improvement, automation, and collaboration, and aim to make a positive impact on the industry as a whole.
 
@@ -34,17 +35,6 @@ To promote diversity and inclusivity within the DevOps community by providing a 
 To recognize and celebrate the achievements of members and organizations in the DevOps community, and to highlight their contributions to the industry.
 To provide mentorship and guidance to new and emerging DevOps professionals, and to support their development and growth within the industry.
 
-## Leadership
-The Nairobi DevOps Community is led by a group of dedicated individuals who are passionate about promoting the growth and success of the DevOps industry in Nairobi and beyond. Our leadership team is composed of experienced professionals from the tech field.
-The core team includes the following community managers:
- - Samuel Kadima
- - Samson Kalume
- - Emma Gachoki
- - Maamun Bwanakombo
- - Emanuel Orega
- - Cleophas Kadima
- - Mercyline Mochama
-
 ## Activities
 Meetups: Regular meetups where DevOps professionals can network, share ideas, and learn from each other.
 Workshops: Hands-on workshops that focus on specific DevOps tools, technologies, and practices.
@@ -52,6 +42,9 @@ Online resources: Access to online resources such as blogs, recordings, and e-bo
 Mentoring programs: Pairing experienced DevOps professionals with emerging professionals for mentorship and guidance.
 Community projects: Collaborative projects within the community that demonstrate the benefits of DevOps practices and technologies.
 Social events: Non-technical events that allow members of the community to get to know each other on a more personal level and build stronger relationships.
+
+## How to reach us
+[devops.nairobi.community@gmail.com]
 
 ## Code of Conduct
 Respect: Treat all members of the community with respect and professionalism, regardless of their background, identity, or views.
