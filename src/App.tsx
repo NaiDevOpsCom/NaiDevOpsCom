@@ -1,12 +1,21 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import NavBar from "./components/HomePage/NavBar";
+import HomePage from "./components/HomePage/HomePage";
+import Footer from "./components/HomePage/Footer";
 
 function App() {
   
 
   return (
-    <div>
-      Hello Mongina
-    </div>
+    <BrowserRouter>
+        <NavBar />
+        <Routes>
+        <Route path="/" element={<HomePage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
   )
 }
 
