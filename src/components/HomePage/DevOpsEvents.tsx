@@ -39,7 +39,7 @@ const DevOpsEvents = () => {
           <h2 className="text-lg font-semibold">Informative DevOps Sessions</h2>
           <p className="text-gray-600">Engage in thought-provoking discussions, expert talks, and interactive 
           sessions that transcend geographical boundaries. Join us as we leverage technology to connect, learn, 
-          and share valuable insights in a dynamic virtual space.</p>
+          and share.</p>
         </div>
       </div>
       <button className="bg-blue-300 hover:bg-blue-400 text-white font-bold py-3 px-8 rounded-full mb-8">
