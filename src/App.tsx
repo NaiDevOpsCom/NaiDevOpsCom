@@ -1,20 +1,28 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import NavBar from "./components/HomePage/NavBar";
+import NavBar from "./layout/NavBar";
 import HomePage from "./components/HomePage/HomePage";
-import Footer from "./components/HomePage/Footer";
+import Footer from "./layout/Footer";
+import AboutPage from './components/HomePage/AboutPage';
+import DevOpsEvents from './components/HomePage/DevOpsEvents';
+import Layout from './layout/Layout';
 
 function App() {
   
 
   return (
     <BrowserRouter>
-        <NavBar />
         <Routes>
-        <Route path="/" element={<HomePage />} />
+          <Route path='/' element={<Layout/>}>
+           <Route index element={<HomePage />} />
+           <Route path='about' element={<AboutPage />} />
+           <Route path='events' element={<DevOpsEvents />} />
+           {/* <Route path='blogs' element={<Blog />} /> */}
+           <Route path='blogs' element={<HomePage />} />
+
+          </Route>
         </Routes>
-        <Footer />
       </BrowserRouter>
   )
 }

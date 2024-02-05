@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import devOpsLogo from '../../assets/devOpsLogo.png';
-
+import devOpsLogo from '../assets/devOpsLogo.png';
 
 
 const NavBar = () => {
