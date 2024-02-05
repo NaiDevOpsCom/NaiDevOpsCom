@@ -1,4 +1,10 @@
 import React from 'react';
+
+import AboutPage from "./AboutPage";
+import DevOpsEvents from "./DevOpsEvents";
+import Partnership from "./Partnership";
+import Community from "./Community";
+
 import homeimage from '../../assets/homeimage.jpg';
 const HomePage = () => {
   return (
@@ -35,6 +41,10 @@ const HomePage = () => {
           />
         </div>
       </div>
+      <AboutPage />
+      <DevOpsEvents />
+      <Partnership />
+      <Community />
     </>
   );
 };
