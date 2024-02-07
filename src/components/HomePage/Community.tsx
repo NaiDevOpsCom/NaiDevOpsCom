@@ -2,12 +2,12 @@ import React from 'react';
 import RatingStars from 'react-rating-stars-component';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import rhona from "./images/rhona.jpeg";
-import ronald from "./images/ronald.jpg";
-import elsie from "./images/elsie.jpg";
-import maamun from "./images/Maamun.jpg";
-import emma from "./images/emma.jpg";
-import john from "./images/in-person.jpeg";
+import rhona from "../../images/feedback/rhona.jpeg";
+import ronald from "../../images/feedback/ronald.jpg";
+import elsie from "../../images/feedback/elsie.jpg";
+import maamun from "../../images/feedback/Maamun.jpg";
+import emma from "../../images/feedback/emma.jpg";
+import john from "../../images/feedback/in-person.jpeg";
 
 const Community = () => {
   const names = ["Rhona", "Ronald", "Elsie", "Maamun", "Emma", "John"];
@@ -44,7 +44,7 @@ const Community = () => {
   );
 
   return (
-    <div className="bg-community-bg flex flex-col justify-center mt-3 ">
+    <div className="sbg-community-bg flex flex-col justify-center mt-3 ">
       <h1 className="text-4xl font-bold text-white items-center justify-center text-center mb-8">Community Feedback</h1>
 
       <Carousel
@@ -65,12 +65,12 @@ const Community = () => {
                 <div className="text-gray-800 mb-4">
                   {description}
                 </div>
-                <div className="flex flex-row items-center">
+                <div className="flex bg-red-900 flex-row items-center">
                   {/* Image */}
                   <img
                     src={image}
                     alt={`Avatar ${index + 1}`}
-                    className="w-10 h-20 rounded-full mr-2"
+                    className="wk-1w0 object-cover h-20 ws-auto sdrounded-full mr-2"
                   />
                   <div>
                     <div className="font-semibold">{name}</div>

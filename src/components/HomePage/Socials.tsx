@@ -9,7 +9,7 @@ const Socials = () => {
           href="https://discord.gg/z6R6przNt9"
           target="_blank"
           rel="noreferrer"
-          className="text-white hover:text-black"
+          className="hover:text-black"
         >
           <span className="sr-only">Twitter</span>
           <svg
@@ -28,7 +28,7 @@ const Socials = () => {
           href="https://twitter.com/nairobidevops"
           target="_blank"
           rel="noreferrer"
-          className="text-white hover:text-[#55acee]"
+          className="hover:text-[#55acee]"
         >
           <span className="sr-only">Twitter</span>
           <svg
@@ -46,7 +46,7 @@ const Socials = () => {
           href="https://github.com/NaiDevOpsCom"
           target="_blank"
           rel="noreferrer"
-          className="text-white hover:text-[#0a0a0a]"
+          className="hover:text-[#0a0a0a]"
         >
           <span className="sr-only">GitHub</span>
           <svg
@@ -68,7 +68,7 @@ const Socials = () => {
           href="https://www.youtube.com/@NairobiDevopsCommunity"
           target="_blank"
           rel="noreferrer"
-          className="text-white hover:text-[#cd201f]"
+          className="hover:text-[#cd201f]"
         >
           <span className="sr-only">YouTube</span>
           <svg
@@ -91,7 +91,7 @@ const Socials = () => {
           href="https://www.linkedin.com/groups/9351099"
           target="_blank"
           rel="noreferrer"
-          className="text-white hover:text-[#0077b5]"
+          className="hover:text-[#0077b5]"
         >
           <span className="sr-only">Linked In</span>
           <svg

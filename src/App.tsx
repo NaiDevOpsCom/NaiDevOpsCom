@@ -8,6 +8,7 @@ import AboutPage from './components/HomePage/AboutPage';
 import DevOpsEvents from './components/HomePage/DevOpsEvents';
 import Layout from './layout/Layout';
 
+
 function App() {
   
 
@@ -19,7 +20,7 @@ function App() {
            <Route path='about' element={<AboutPage />} />
            <Route path='events' element={<DevOpsEvents />} />
            {/* <Route path='blogs' element={<Blog />} /> */}
-           <Route path='blogs' element={<HomePage />} />
+           <Route path='blog' element={<HomePage />} />
 
           </Route>
         </Routes>

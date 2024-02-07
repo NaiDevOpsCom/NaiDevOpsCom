@@ -1,163 +1,67 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import devOpsLogo from '../assets/devOpsLogo.png';
 
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
-const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (
-        window.scrollY > 0 ||
-        window.scrollX > 0 ||
-        window.innerWidth !== window.outerWidth
-      ) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
-    };
-  }, []);
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const closeNavbar = () => {
+    setIsOpen(false);
   };
 
   return (
-    <div>
-        <nav
-      className={`fixed top-0 left-0 w-full p-4 transition active  right-0 z-10 flex flex-wrap items-center justify-between  py-4 md:py-0 px-10 text-lg ${
-        isScrolled ? 'bg-white ' : 'bg-transparent'
-      }`}
-    >
-      <div>
-        <a href="">
-          <img
-            src={devOpsLogo}
-            alt="logo"
-            className="w-60 md:cursor-pointer"
-          />
+    <nav className="mt-8 bg-white border-blue-200 dark:bg-blue-900 relative">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src={devOpsLogo} className="h-12 sm:h-16" alt="Flowbite Logo" />
         </a>
-      </div>
-      <a href="/#" onClick={toggleMenu}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="menu-button"
-          className="h-6 w-6 cursor-pointer md:hidden block"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </a>
-      <div
-        className={`w-full md:flex md:items-center md:w-auto ${
-          isMenuOpen ? 'block' : 'hidden'
-        }`}
-        id="menu "
-      >
-        <ul className="text-base text-[#0da4d4] hover:text-[#0c2c44] pt-4 md:flex md:justify-between md:pt-0">
-          <li>
-            <Link to="/">
-              <a
-                className=" text-sm pr-8 font-bold leading-none hover:text-[#0da4d4]"
-                href="/"
-              >
-                Home
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link to="about">
-              <a
-                className="text-sm pr-8 font-bold leading-none hover:text-[#0da4d4]"
-                href="about"
-              >
-                About Us
-              </a>
-            </Link>
-          </li>
-          <li>
-            <a
-              className="text-sm pr-8 font-bold leading-none hover:text-[#0da4d4]"
-              // href="https://www.eventbrite.com/o/nairobi-devops-commuity-67065967383"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Events
-            </a>
-          </li>
-          <li>
-            <Link to="blogs">
-              <a
-                className="text-sm pr-8 font-bold leading-none hover:text-[#0da4d4]"
-                href="/"
-              >
-                Blogs
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link to="faqs">
-              <a
-                className="text-sm pr-8 font-bold leading-none hover:text-[#0da4d4]"
-                href="gallery"
-              >
-                FAQs
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link to="contactus">
-              <a
-                className="text-sm pr-8 font-bold leading-none hover:text-[#0da4d4]"
-                href="gallery"
-              >
-                Contact Us
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link to="careers">
-              <a
-                className="text-sm pr-8 font-bold leading-none hover:text-[#0da4d4]"
-                href="gallery"
-              >
-                Careers
-              </a>
-            </Link>
-          </li>
-        </ul>
-
-        <a
-          href="https://forms.gle/pFZYq3K642TiJTWc6"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-0 h-8 px-4 text-sm rounded-full">
-            Partner with us
+        <div className="flex items-center">
+         <button type="button" className="md:hidden ml-2 px-2 py-1 rounded-lg bg-blue-600 text-white text-sm hover:bg-blue-700 focus:outline-none focus:ring- dark:bg-blue-600 dark:text-blue-200 dark:hover:bg-blue-700 dark:focus:ring-blue-600" >
+             Partner
           </button>
-        </a>
+          <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue-500 rounded-lg md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:text-blue-400 dark:hover:bg-blue-700 dark:focus:ring-blue-600" aria-controls="navbar-default" aria-expanded={isOpen ? "true" : "false"}>
+            <span className="sr-only">Open main menu</span>
+            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+          </button>
+          
+        </div>
+        <div className={`${isOpen ? "absolute" : "hidden"} top-full left-0 w-full md:block md:w-auto`} id="navbar-default">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-blue-100 rounded-lg bg-blue-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-blue-800 md:dark:bg-blue-900 dark:border-blue-700">
+            <li>
+              <Link to="/" onClick={closeNavbar} className={`block py-2 px-3 rounded md:p-0 dark:text-white md:dark:text-blue-500 ${location.pathname === '/' ? 'text-blue-600' : 'text-blue-900'}`} aria-current="page">Home</Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={closeNavbar} className={`block py-2 px-3 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/about' ? 'text-blue-600' : 'text-blue-900'}`}>
+                About</Link>
+            </li>
+            <li>
+              <Link to="/events" onClick={closeNavbar} className={`block py-2 px-3 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/events' ? 'text-blue-600' : 'text-blue-900'}`}>
+                Events</Link>
+            </li>
+            <li>
+              <Link to="/blog" onClick={closeNavbar} className={`block py-2 px-3 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/blog' ? 'text-blue-600' : 'text-blue-900'}`}>
+                Blog</Link>
+            </li>
+            <li>
+              <Link to="/faqs" onClick={closeNavbar} className={`block py-2 px-3 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/faqs' ? 'text-blue-600' : 'text-blue-900'}`}>
+                FAQs</Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={closeNavbar} className={`block py-2 px-3 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/contact' ? 'text-blue-600' : 'text-blue-900'}`}>
+                Contact us</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    </div>
   );
-}
+};
 
-export default NavBar;
+export default Navbar;

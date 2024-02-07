@@ -1,8 +1,7 @@
 import React from 'react';
-
-import twitterspace from "./images/twitter-space.svg";
-import inperson from "./images/in-person.jpeg";
-import googlemeet from "./images/google-meet.jpeg"
+import twitterspace from "../../images/feedback/twitter-space.svg";
+import inperson from "../../images/feedback/in-person.jpeg";
+import googlemeet from "../../images/feedback/google-meet.jpeg"
 
 const DevOpsEvents = () => {
   return (
