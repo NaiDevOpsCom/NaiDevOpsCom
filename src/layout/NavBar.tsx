@@ -15,13 +15,13 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="mt-8 bg-white border-blue-200 dark:bg-blue-900 relative">
+    <nav className="mt-8 bg-white border-blue-200 relative">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={devOpsLogo} className="h-12 sm:h-16" alt="Flowbite Logo" />
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src={devOpsLogo} className="h-12 sm:h-16" alt="ndc Logo" />
         </a>
         <div className="flex items-center">
-         <button type="button" className="md:hidden ml-2 px-2 py-1 rounded-lg bg-blue-600 text-white text-sm hover:bg-blue-700 focus:outline-none focus:ring- dark:bg-blue-600 dark:text-blue-200 dark:hover:bg-blue-700 dark:focus:ring-blue-600" >
+         <button type="button" className="md:hidden mr-2 px-2 py-1 rounded-lg bg-blue-600 text-white text-sm hover:bg-blue-700 focus:outline-none focus:ring- dark:text-blue-200 dark:hover:bg-blue-700 dark:focus:ring-blue-600" >
              Partner
           </button>
           <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue-500 rounded-lg md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:text-blue-400 dark:hover:bg-blue-700 dark:focus:ring-blue-600" aria-controls="navbar-default" aria-expanded={isOpen ? "true" : "false"}>
@@ -30,10 +30,10 @@ const Navbar: React.FC = () => {
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
             </svg>
           </button>
-          
         </div>
-        <div className={`${isOpen ? "absolute" : "hidden"} top-full left-0 w-full md:block md:w-auto`} id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-blue-100 rounded-lg bg-blue-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-blue-800 md:dark:bg-blue-900 dark:border-blue-700">
+
+        <div className={`${isOpen ? "absolute z-20" : "hidden"} top-full left-0 w-full md:block md:w-auto`} id="navbar-default">
+          <ul className="font-medium flex flex-col sm:items-center p-4 md:p-0 mt-4 border border-blue-100 rounded-lg bg-white z-10 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-blue-700">
             <li>
               <Link to="/" onClick={closeNavbar} className={`block py-2 px-3 rounded md:p-0 dark:text-white md:dark:text-blue-500 ${location.pathname === '/' ? 'text-blue-600' : 'text-blue-900'}`} aria-current="page">Home</Link>
             </li>
@@ -50,12 +50,12 @@ const Navbar: React.FC = () => {
                 Blog</Link>
             </li>
             <li>
-              <Link to="/faqs" onClick={closeNavbar} className={`block py-2 px-3 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/faqs' ? 'text-blue-600' : 'text-blue-900'}`}>
-                FAQs</Link>
-            </li>
-            <li>
               <Link to="/contact" onClick={closeNavbar} className={`block py-2 px-3 rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/contact' ? 'text-blue-600' : 'text-blue-900'}`}>
                 Contact us</Link>
+            </li>
+            <li>
+              <Link to="/partner" onClick={closeNavbar} className={`hidden sm:block py-3 px-4 rounded-xl bg-blue-600 text-white text-sm hover:bg-blue-700 md:border-0 md:p-0dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent ${location.pathname === '/contact' ? 'text-blue-600' : 'text-blue-900'}`}>
+                Partner</Link>
             </li>
           </ul>
         </div>

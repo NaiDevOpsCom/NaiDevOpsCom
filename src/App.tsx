@@ -7,6 +7,7 @@ import Footer from "./layout/Footer";
 import AboutPage from './components/HomePage/AboutPage';
 import DevOpsEvents from './components/HomePage/DevOpsEvents';
 import Layout from './layout/Layout';
+import NoPage from './pages/NoPage';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
            <Route path='events' element={<DevOpsEvents />} />
            {/* <Route path='blogs' element={<Blog />} /> */}
            <Route path='blog' element={<HomePage />} />
+           <Route path="*" element={<NoPage />} />
+
 
           </Route>
         </Routes>

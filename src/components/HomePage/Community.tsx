@@ -44,8 +44,9 @@ const Community = () => {
   );
 
   return (
-    <div className="sbg-community-bg flex flex-col justify-center mt-3 ">
-      <h1 className="text-4xl font-bold text-white items-center justify-center text-center mb-8">Community Feedback</h1>
+    <div className="sbg-community-bg flex flex-col justify-center mt-3 xl:my-16">
+      <h1 className="text-2xl sm:text-4xl font-bold textx-white items-center justify-center text-center mb-8">
+        Community Feedback</h1>
 
       <Carousel
         showThumbs={false}
@@ -55,26 +56,29 @@ const Community = () => {
         infiniteLoop={true}
       >
         {chunkedCards.map((group, index) => (
-          <div key={index} className="flex justify-center">
+          <div key={index} className="grid grid-cols-2 sm:max-w-[60vw] mx-auto  ">
             {group.map(({ name, title, description, rating, image }, cardIndex) => (
               <div
                 key={cardIndex}
-                className="bg-white p-6 rounded-md shadow-md flex flex-col items-center transform transition-transform hover:scale-105 mx-10 mb-16"
+                className="bg-white p-2 sm:p-6 rounded-md shadow-xl flex flex-col items-center transform transition-transform hover:scale-105 mx-2 sm:mx-10 mb-16"
               >
-                <RatingStars {...ratingOptions} value={rating} />
-                <div className="text-gray-800 mb-4">
-                  {description}
-                </div>
-                <div className="flex bg-red-900 flex-row items-center">
+                <RatingStars {...ratingOptions} size={10} value={rating} />
+
+                <div className="grid grid-cols-1 sm:grid-cols-2">
                   {/* Image */}
-                  <img
-                    src={image}
-                    alt={`Avatar ${index + 1}`}
-                    className="wk-1w0 object-cover h-20 ws-auto sdrounded-full mr-2"
-                  />
-                  <div>
-                    <div className="font-semibold">{name}</div>
-                    <div className="text-gray-600">{title}</div>
+                  <div className='grid  justify-center'>
+                   <div className='border-1 w-36 h-36 rounded-full overflow-hidden'>
+                      <img className="h-36" src={image} alt="image description" />
+                    </div>
+                  </div>
+                  <div className='flex items-center px-2'>
+                    <div className='mx-auto'>
+                      <div className="font-semibold mt-2">{name}</div>
+                      <div className=" text-gray-600 font-semibold text-sm">{title}</div>
+                    </div>
+                  </div>
+                  <div className="mt-2 text-gray-800 text-sm sm:text-medium mb-4">
+                   {description}
                   </div>
                 </div>
               </div>
