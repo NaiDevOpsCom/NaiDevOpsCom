@@ -44,7 +44,7 @@ const Community = () => {
   );
 
   return (
-    <div className="sbg-community-bg flex flex-col justify-center mt-3 xl:my-16">
+    <div className="sbg-community-bg flex flex-col justify-center my-12 xl:my-16">
       <h1 className="text-2xl sm:text-4xl font-bold textx-white items-center justify-center text-center mb-8">
         Community Feedback</h1>
 

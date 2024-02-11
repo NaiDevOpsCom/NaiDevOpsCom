@@ -16,7 +16,9 @@ import deimos from '../../images/partners/deimos.svg'
 
 import contactus from '../../images/contactus.png'
 
-
+import googlemeet from '../../images/homeevents/googlemeet.png'
+import inperson from '../../images/homeevents/inperson.png'
+import xspaces from '../../images/homeevents/xspaces.png'
 
 const HomePage = () => 
 {
@@ -28,16 +30,12 @@ const HomePage = () =>
     return match ? match[1] : null;
   };
 
-  // Get the video ID from the provided URL
   const videoId = getVideoId("https://www.youtube.com/watch?v=Xrgk023l4lI");
-
-  // Options for the YouTube player (you can customize these)
   const opts = {
     height: "100%",
     width: '100%',
     
     playerVars: {
-      // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
     },
   };
@@ -111,11 +109,20 @@ const HomePage = () =>
 
     {/* Video */}
     <div className='container mx-auto my-16'>
-       <h1 className='font-bold text-center text-2xl sm:text-3xl md:10xl mt-4'>About Nairobi Devops Community</h1>
-       <div className='container mx-auto flex p-8 justify-around sm:h-[60vh] md:h-[50vh] lg:h-[80vh] w-[100vw] lg:w-[70vw] mt-8'>
-        {videoId &&
-          <YouTube videoId={videoId} className='w-full h-full bg-green-200 px-auto' opts={opts}  />
+       <h1 className='font-bold w-[70vw] mx-auto text-center text-2xl sm:text-3xl md:10xl mt-4'>About Nairobi Devops Community</h1>
+       <div className='container bg-green-20 mx-auto flex p-8 flex-col justify-center items-center sm:h-[60vh] md:h-[50vh] lg:h-[80vh] w-[100vw] lg:w-[70vw] mt-8'>
+        {videoId?
+          <YouTube videoId={videoId} className='w-full h-full 0 px-auto' opts={opts}  />
+            :
+          <div>
+              <svg aria-hidden="true" className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                  <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+              </svg>
+              <span className="sr-only">Loading...</span>
+          </div>
         }
+
       </div>
 
     </div>
@@ -130,31 +137,31 @@ const HomePage = () =>
         <div className="mb-4 sm:mb-12">
           <div className='flex flex-col justify-center items-center'>
             <div className='flex items-center justify-center rounded-full border-2 border-blue-50 bg-indigo-200 w-[25%]h-[25%] w-32 h-32 md:w-40 md:h-40 overflow-hidden'>
-               <img src={code}
+               <img src={xspaces}
                 className="mx-autol" alt=""/>
             </div>
-            <p className="mb-2 font-bold text-center text-lg xl:text-2xl">X-(formerly twitter)Spaces</p>
-            <p className="text-neutral-500 dark:text-neutral-300">sgvukw sgvkus</p>
+            <p className="mb-2 font-bold text-center mt-6 text-lg xl:text-2xl">X-(formerly twitter)Spaces</p>
+            {/* <p className="text-neutral-500 dark:text-neutral-300">sgvukw sgvkus</p> */}
           </div>
         </div>
         <div className="mb-4 sm:mb-12">
           <div className='flex flex-col justify-center items-center'>
            <div className='flex items-center justify-center rounded-full border-1 border-blue-50 bg-orange-100 w-[25%]h-[25%] w-32 h-32 md:w-40 md:h-40 overflow-hidden'>
-               <img src={code}
+               <img src={inperson}
                 className="mx-autol" alt=""/>
             </div>
-            <p className="mb-2 font-bold text-center text-lg xl:text-2xl">In-Person Events</p>
-            <p className="text-neutral-500 dark:text-neutral-300">sgvukw sgvkus</p>
+            <p className="mb-2 font-bold text-center mt-6 text-lg xl:text-2xl">In-Person Events</p>
+            {/* <p className="text-neutral-500 dark:text-neutral-300">sgvukw sgvkus</p> */}
           </div>
         </div>
         <div className="mb-4 sm:mb-12">
           <div className='flex flex-col justify-center items-center'>
             <div className='flex items-center justify-center rounded-full border-1 border-red-200 bg-red-200 w-[25%]h-[25%] w-32 h-32 md:w-40 md:h-40 overflow-hidden'>
-               <img src={code}
+               <img src={googlemeet}
                 className="mx-autol" alt=""/>
             </div>
-            <p className="mb-2 font-bold text-center text-lg xl:text-2xl">Informative Devops Sessions</p>
-            <p className="text-neutral-500 dark:text-neutral-300">sgvukw sgvkus</p>
+            <p className="mb-2 font-bold text-center mt-6 text-lg xl:text-2xl">Informative Devops Sessions</p>
+            {/* <p className="text-neutral-500 dark:text-neutral-300">sgvukw sgvkus</p> */}
           </div>
         </div>
       </div>
@@ -168,7 +175,7 @@ const HomePage = () =>
 
     {/* Prtners */}
     <div className='container mx-auto lg:w-[70vw] flex items-center min-h-[40vh] xl:my-12 shadow-xl'>
-      <div className='grid  bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-2 gap-4 sm:gap-0 justify-around px-4 sm:px-12 py-3'>
+      <div className='grid  bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-2 gap-4 sm:gap-0 justify-around px-4 sm:px-12 py-16'>
         <div>
           <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Our Partners</h1>
           <p className='text-gray-800 my-3'>The collaboration and synergy among these partners in a DevOps community<br/>contribute to the successful implementation of DevOps principles. </p>
@@ -197,9 +204,9 @@ const HomePage = () =>
       <Community />
 
 
-          {/* Prtners */}
+          {/* Partners */}
     <div className='container mx-auto ldg:w-[70vw]  min-h-[40vh] xl:my-12 shadow-xl'>
-      <div className='grid bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-3 sm:gap-8 sm:gap-0 jcustify-around px-4 sm:px-12 py-3'>
+      <div className='grid bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-3 sm:gap-8 dsm:gap-0 jcustify-around px-4 sm:px-12 py-3'>
          <div className='flex items-center w-full p-4'>
            <img src={contactus} className="w-full m-5" alt=""/>
          </div>
