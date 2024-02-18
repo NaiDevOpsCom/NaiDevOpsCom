@@ -1,8 +1,8 @@
-import React from 'react';
 import Socials from "../components/HomePage/Socials";
 import devOpsLogo from '../assets/devOpsLogo.png';
 
 import subscribe from '../images/subscribe.png'
+import { Link } from 'react-router-dom';
 
 const Footer = () => 
 {
@@ -47,7 +47,7 @@ const Footer = () =>
 
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           {/* <p className="font-medium">
             Company
@@ -65,7 +65,7 @@ const Footer = () =>
           </p> */}
           <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
             <a className="hover:opacity-75" href=""> Hire us </a>
-            <a className="hover:opacity-75" href=""> Partner with us </a>
+            <Link to="/partner" className="hover:opacity-75" > Partner with us </Link>
             <a className="hover:opacity-75" href=""> Careers </a>
           </nav>
         </div>
@@ -74,9 +74,11 @@ const Footer = () =>
             Helpful Links
           </p> */}
           <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-            <a className="hover:opacity-75" href=""> Contact </a>
-            <a className="hover:opacity-75" href=""> FAQs </a>
-            <a className="hover:opacity-75" href=""> Activities</a>
+            <a className="hover:opacity-75" href="/"> FAQs </a>
+            <a className="hover:opacity-75" href="/"> Activities</a>
+            <a className="hover:opacity-75" href="/"> 0721 234 567</a>
+            <a className="hover:opacity-75" href="/"> contact-us@naidevops.com</a>
+
           </nav>
         </div>
         <div>

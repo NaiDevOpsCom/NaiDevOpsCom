@@ -1,6 +1,6 @@
-import React from 'react';
-import RatingStars from 'react-rating-stars-component';
 import { Carousel } from 'react-responsive-carousel';
+// @ts-ignore
+import ReactStars from "react-rating-stars-component";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import rhona from "../../images/feedback/rhona.jpeg";
 import ronald from "../../images/feedback/ronald.jpg";
@@ -22,10 +22,11 @@ const Community = () => {
   ];
   const ratings = [4.5, 5, 4, 4.8, 4.2, 4.7];
 
-  const ratingOptions = {
-    size: 30,
-    edit: false,
-  };
+  // const ratingOptions = {
+  //   size: 30,
+  //   edit: false,
+  // };
+
   const chunkArray = (array: any[], chunkSize: number) => {
     return Array.from({ length: Math.ceil(array.length / chunkSize) }, (_, index) =>
       array.slice(index * chunkSize, (index + 1) * chunkSize)
@@ -62,8 +63,14 @@ const Community = () => {
                 key={cardIndex}
                 className="bg-white p-2 sm:p-6 rounded-md shadow-xl flex flex-col items-center transform transition-transform hover:scale-105 mx-2 sm:mx-10 mb-16"
               >
-                <RatingStars {...ratingOptions} size={10} value={rating} />
-
+                {/* <RatingStars {...ratingOptions} size={10} value={rating} /> */}
+                <ReactStars
+                  count={5}
+                  // onChange={ratingChanged}
+                  size={24}
+                  value={rating}
+                  activeColor="#ffd700"
+                />,
                 <div className="grid grid-cols-1 sm:grid-cols-2">
                   {/* Image */}
                   <div className='grid  justify-center'>

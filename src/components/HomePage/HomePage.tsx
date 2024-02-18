@@ -1,14 +1,8 @@
-import React from 'react';
-
-import AboutPage from "./AboutPage";
-import DevOpsEvents from "./DevOpsEvents";
-import Partnership from "./Partnership";
 import Community from "./Community";
 import YouTube from 'react-youtube';
 import CountUp from 'react-countup';
 
 import homeimage from '../../assets/homeimage.jpg';
-import code from '../../images/code.png'
 import moringa from '../../images/partners/moringa.png'
 import devligence from '../../images/partners/devligence.png'
 import devopsdays from '../../images/partners/devopsdays.png'
@@ -25,7 +19,7 @@ const HomePage = () =>
 
 
    // Function to extract video ID from YouTube URL
-   const getVideoId = (url) => {
+   const getVideoId = (url: string) => {
     const match = url.match(/[?&]v=([^&]+)/);
     return match ? match[1] : null;
   };

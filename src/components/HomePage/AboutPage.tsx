@@ -1,8 +1,6 @@
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
-import React from "react";
-import defaultUser from "../../images/team/defaultUser.png"
-import about from "../../images/backgrounds/about.webp"
+import { FaLinkedinIn } from "react-icons/fa";
+
+
 // team
 import Alvin from "../../images/team/Alvin.jpg"
 import diana from "../../images/team/diana.jpeg"
@@ -23,6 +21,7 @@ import samson from "../../images/team/samson.jpg"
 import samuel from "../../images/team/samuel.jpeg"
 import YouTube from "react-youtube";
 
+import aboutus from "../../images/aboutus.png";
 
 
 
@@ -30,7 +29,7 @@ const AboutPage = () =>
 {
 
      // Function to extract video ID from YouTube URL
-     const getVideoId = (url) => {
+     const getVideoId = (url: string) => {
       const match = url.match(/[?&]v=([^&]+)/);
       return match ? match[1] : null;
     };
@@ -175,12 +174,40 @@ return (
     </div>
   </div>
 
-  <div className="container mx-auto min-h-[60vh] rounded-xl bg-green-100 my-20 flex items-center justify-center p-3 sm:p-6">
-    <div className=" my-6  ">
+  <div className="container mx-auto md:w-[70vw] min-h-[60vh] rounded-xl bg-yellow-50 my-20 grid sm:grid-cols-2 items-center xjustify-center p-3 sm:p-6">
+    <div className="my-6 px-8  ">
+      <h2 className="text-xl sm:text-2xl lg:text-6xl font-semibold my-4">Who we are</h2>
+      <h4 className="text-lg sm:text-xl lg:2xl font-semibold">Vision</h4>
+      <p className="my-3">To be a leading DevOps community in Nairobi and beyond, driving innovation and empowering professionals to excel in their careers.
+      </p>
+        
+      <h5 className="text-xl md:text-2xl font-bold my-4">Our Objectives</h5>
+        <hr/>
+        <h5 className="font-semibold text-medium my-4">
+        Fostering a collaborative community of DevOps professionals. 
+        </h5>
+      <hr/>
+        <h5 className="font-semibold text-medium my-4">
+        Promoting the adoption of DevOps best practices and principles among individuals and organizations in the region.
+        </h5>
+
+      <hr/>
+        <h5 className="font-semibold text-medium my-4">
+          Providing mentorship and guidance to new and emerging DevOps proffessionals.
+
+        </h5>
+        <hr/>
+        <h5 className="font-semibold text-medium my-4">
+        Organize and host regular events, such as meetups, workshops,and talks.
+        </h5>
 
     </div>
-    <div className=" my-6  ">
-      
+    <div className="flex items-center justify-center my-6  ">
+      <img
+          src={aboutus}
+          className="mx-auto "
+          alt=""
+        />
 
     </div>
   </div>

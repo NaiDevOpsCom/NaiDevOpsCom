@@ -1,4 +1,3 @@
-import React from 'react';
 import twitterspace from "../../images/feedback/twitter-space.svg";
 import inperson from "../../images/feedback/in-person.jpeg";
 import googlemeet from "../../images/feedback/google-meet.jpeg"

@@ -1,13 +1,13 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import NavBar from "./layout/NavBar";
 import HomePage from "./components/HomePage/HomePage";
-import Footer from "./layout/Footer";
 import AboutPage from './components/HomePage/AboutPage';
-import DevOpsEvents from './components/HomePage/DevOpsEvents';
 import Layout from './layout/Layout';
 import NoPage from './pages/NoPage';
+import Blog from './pages/Blog';
+import Events from './pages/Events';
+import Partner from './pages/Partner';
+import AdminLayout from './admin/layout/AdminLayout';
 
 
 function App() {
@@ -19,12 +19,13 @@ function App() {
           <Route path='/' element={<Layout/>}>
            <Route index element={<HomePage />} />
            <Route path='about' element={<AboutPage />} />
-           {/* <Route path='events' element={<DevOpsEvents />} /> */}
-           {/* <Route path='blogs' element={<Blog />} /> */}
-           <Route path='blog' element={<HomePage />} />
+           <Route path='events' element={<Events />} />
+           <Route path='partner' element={<Partner />} />
+           <Route path='blog' element={<Blog />} />
            <Route path="*" element={<NoPage />} />
-
-
+          </Route>
+          <Route path='/admin' element={<AdminLayout/>}>
+            <Route index element={<HomePage />} />
           </Route>
         </Routes>
       </BrowserRouter>
