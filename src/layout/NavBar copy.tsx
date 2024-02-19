@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import devOpsLogo from '../../assets/devOpsLogo.png';
-
+import devOpsLogo from '../assets/devOpsLogo.png';
 
 
 const NavBar = () => {
@@ -35,6 +34,11 @@ const NavBar = () => {
   };
 
   return (
+
+
+
+
+
     <div>
         <nav
       className={`fixed top-0 left-0 w-full p-4 transition active  right-0 z-10 flex flex-wrap items-center justify-between  py-4 md:py-0 px-10 text-lg ${
