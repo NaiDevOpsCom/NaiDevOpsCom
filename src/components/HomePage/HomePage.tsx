@@ -4,6 +4,7 @@ import AboutPage from "./AboutPage";
 import DevOpsEvents from "./DevOpsEvents";
 import Partnership from "./Partnership";
 import Community from "./Community";
+import NewsletterSection from './NewsletterSection';
 
 import homeimage from '../../assets/homeimage.jpg';
 const HomePage = () => {
@@ -45,6 +46,7 @@ const HomePage = () => {
       <DevOpsEvents />
       <Partnership />
       <Community />
+      <NewsletterSection />
     </>
   );
 };
