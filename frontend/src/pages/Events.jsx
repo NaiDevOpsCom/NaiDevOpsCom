@@ -1,9 +1,12 @@
 import React, {  useState } from 'react';
-import { SiGooglemeet } from 'react-icons/si';
+import { CgEventbrite } from "react-icons/cg";
 import { IoLocationOutline } from 'react-icons/io5';
 import CountdownTimer from '../components/utils/CountdownTimer';
 import FormatDate from '../components/utils/FormatDate';
-
+import image1 from "../images/events/image1.jpg"
+import image2 from "../images/events/image2.jpg"
+import image3 from "../images/events/image3.jpg"
+import image4 from "../images/events/image4.jpg"
 
 
 const Events = () => {
@@ -21,42 +24,46 @@ const Events = () => {
     {
       id: 1,
       title: 'Event 1',
+      event_type:"Online Events",
       status: 'Upcoming',
       date: new Date(),
       image: 'https://example.com/event1.jpg',
       description: 'This is the description for Event 1.',
       location:"",
-      googleMeetLink: 'https://meet.google.com/abc-xyz-123',
+      rsvp: 'https://meet.google.com/abc-xyz-123',
     },
     {
       id: 2,
       title: 'Event 2',
+      event_type:"Online Events",
       status: 'Past',
       date:  currentDate ,
       image: 'https://example.com/event2.jpg',
       description: 'This is the description for Event 2.',
       location: "Strathmore University",
-      googleMeetLink: '',
+      rsvp: '',
     },
     {
       id: 3,
       title: 'Event 3',
+      event_type:"Online Events",
       status: 'Regular',
       date: new Date(),
       image: 'https://example.com/event3.jpg',
       description: 'This is the description for Event 3.',
       location:"",
-      googleMeetLink: 'https://meet.google.com/uvw-xyz-789',
+      rsvp: 'https://meet.google.com/uvw-xyz-789',
     },
     {
       id: 4,
       title: 'Devops Curriculum tour',
+      event_type:"Campus Tours",
       status: 'Past',
       date: new Date(),
       image: 'https://example.com/event2.jpg',
       description: 'This is the description for Event 2.',
       location: "Kenyatta University",
-      googleMeetLink: '',
+      rsvp: '',
     },
     // Add more events here
   ];
@@ -101,19 +108,61 @@ const Events = () => {
         {
             filteredEvents && filteredEvents.length<1?
             <>
-            <div className="min-h-[40vh] items-center lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 grid-cols-1">
-              <div className="flex justify-center">
+            <div className="mb-18 min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
+              <div className="flex justify-center ">
                 <div>
-                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Online Events</h1>
+                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Weekly Online Events</h1>
                   <p className='text-gray-800 text-xl font-thin my-3'>
-                  We do weekly online events where experts in the community share their knowledge to expose newbees and other devops professionals to different Devops tools and technologies<br/>
+                  Explore a world of knowledge at our weekly online events, where community experts generously share their insights. Join us to discover a diverse array of DevOps tools and technologies, designed to enlighten both newcomers and seasoned professionals in the field.
                  </p>
               </div>
               </div>
-              <div className='flex p-8 flex-col justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw] mt-8'>
+              
+              <div className='flex zp-8 overflow-hidden justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
                 <img
-                    className="object-cover w-full h-56 rounded-lg xl:w-64"
-                    src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    className="object-cover w-full rounded-lg dxl:w-64"
+                    src={image1}
+                    alt=""
+                  />
+                  
+              </div>
+            </div>
+            
+
+
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
+
+              <div className="flex justify-center">
+                <div>
+                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Monthly Physical Workshops</h1>
+                  <p className='text-gray-800 text-xl font-thin my-3'>
+                  Embark on a journey of learning at our monthly workshops, where community experts generously share their knowledge. Immerse yourself in diverse DevOps tools and technologies, tailored to enlighten both newcomers and seasoned professionals. Beyond the enriching educational experience, these workshops also serve as invaluable networking opportunities for professionals in the field.                 </p>
+              </div>
+              </div>
+
+              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
+                <img
+                    className="object-cover w-full rounded-lg dxl:w-64"
+                    src={image2}
+                    alt=""
+                  />
+                  
+              </div>
+            </div>
+
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
+              <div className="flex justify-center">
+                <div>
+                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Campus Tours</h1>
+                  <p className='text-gray-800 text-xl font-thin my-3'>
+                  We are evangelizing DevOps through educational outreach, our campus tours span across various universities in Kenya. With a focus on introducing tech students to the dynamic realm of technology, we aim to inspire them to consider it as a promising career path. These sessions not only provide valuable insights but also offer mentorship, empowering students on their journey into the exciting world of technology. Join us in shaping the future of aspiring tech professionals.
+                 </p>
+              </div>
+              </div>
+              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
+                <img
+                    className="object-cover w-full rounded-lg dxl:w-64"
+                    src={image3}
                     alt=""
                   />
                   
@@ -121,71 +170,21 @@ const Events = () => {
             </div>
 
 
-            <div className="min-h-[40vh] items-center lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 grid-cols-1">
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
               <div className="flex justify-center">
                 <div>
-                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Monthly Physical Workshops</h1>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
-                  We do monthly workshops where experts in the community share their knowledge to expose newbees and other devops professionals to different Devops tools
-                    and technologies <br/>.Apart prom learning, these workshops act as an opportunity for professionals to network
-                 </p>
-              </div>
-              </div>
-              <div className='flex p-8 flex-col justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw] mt-8'>
-                <img
-                    className="object-cover w-full h-56 rounded-lg xl:w-64"
-                    src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    alt=""
-                  />
-                  
-              </div>
-            </div>
-
-            <div className="min-h-[40vh] items-center lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 grid-cols-1">
-              <div className="flex justify-center">
-                <div>
-                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Campus Tours</h1>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
-                  We do campus tous to different universities in Kenya. We use this as an opportunity to expose tech students to the tech field so that they can consider it as a career path. We also offer mentorship to the students duuring this sessions
-                 </p>
-              </div>
-              </div>
-              <div className='flex p-8 flex-col justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw] mt-8'>
-                <img
-                    className="object-cover w-full h-56 rounded-lg xl:w-64"
-                    src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                    alt=""
-                  />
-                  
-              </div>
-            </div>
-
-
-            <div className="min-h-[40vh] items-center lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 grid-cols-1">
-              <div className="flex justify-center">
-                <div>
-                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Africa Devops Summit</h1>
+                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Africa Devops Summit</h1>
                   <div>
                   <p className='text-gray-800 text-xl font-thin my-3'>
-                  Join us in the DevOps revolution! 
-                  </p>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
-                  🚀 The Africa DevOps Summit, formerly the Nairobi DevOps Summit, has expanded its horizons to bring you a continent-wide celebration of collaboration, innovation, and best practices in DevOps.
-                  </p>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
-                  📅 Annual Series Across Africa:
-                  </p>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
-                  Starting from 2024, the Africa DevOps Summit will make its way to cities across the continent, connecting DevOps professionals, enthusiasts, and tech communities.
-                  🤝
+                  The Africa DevOps Summit, formerly the Nairobi DevOps Summit – an event that we launched in September 2023 – has expanded its horizons to bring you a continent-wide celebration of collaboration, innovation, and best practices in DevOps. Starting in 2024, the Africa DevOps Summit will make its way to cities across the continent, connecting DevOps professionals, enthusiasts, and tech communities. This event provides an opportunity for new DevOps tools and technologies to be showcased, new trends to be shared, experts to share their knowledge, and a platform for DevOps engineers to learn.
                   </p>
                  </div>
               </div>
               </div>
-              <div className='flex p-8 flex-col justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw] mt-8'>
+              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
                 <img
-                    className="object-cover w-full h-56 rounded-lg xl:w-64"
-                    src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    className="object-cover w-full rounded-lg dxl:w-64"
+                    src={image4}
                     alt=""
                   />
                   
@@ -193,19 +192,19 @@ const Events = () => {
             </div>
 
 
-            <div className="min-h-[40vh] items-center lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 grid-cols-1">
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
               <div className="flex justify-center">
                 <div>
-                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Fun and Networking Events</h1>
+                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Fun and Networking Events</h1>
                   <p className='text-gray-800 text-xl font-thin my-3'>
-                  For our fun and networking events we visit various places where community members can learn, have fun and network. These include Datacenter visits, hiking  and team building activities
+                  Join us for our engaging and networking events, where we venture to diverse locations to provide community members with opportunities to learn, have fun, and network. Our activities range from insightful data center visits to invigorating hiking adventures and team-building activities. Explore with us as we blend knowledge, enjoyment, and connection in unique and exciting settings.
                  </p>
               </div>
               </div>
-              <div className='flex p-8 flex-col justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw] mt-8'>
+              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
                 <img
-                    className="object-cover w-full h-56 rounded-lg xl:w-64"
-                    src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    className="object-cover w-full rounded-lg dxl:w-64"
+                    src={image1}
                     alt=""
                   />
                   
@@ -219,13 +218,15 @@ const Events = () => {
             ""
           }
 
-        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+
+        {/* sfvdv */}
+        <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 ">
           {filteredEvents &&
             filteredEvents.map((event) => (
-              <div key={event.id} className="xl:flex shadow-xl ">
+              <div key={event.id} className="xl:flex shadow-xl overflow-hidden ">
                 <img
-                  className="object-cover w-full h-56 rounded-lg xl:w-64"
-                  src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  className="object-cover w-full rounded-lg xl:w-64 max-h-[30vh]"
+                  src={image2}
                   alt=""
                 />
 
@@ -236,25 +237,26 @@ const Events = () => {
                   >
                     {event.title}
                   </a>
-                  {event.googleMeetLink &&
-                  <div className='flex mb-2 flex-row items-center justify-between'>
-                    <h6 className='font-semibold'>Online session</h6>
-                    <a href={event.googleMeetLink} className='flex text-blue-600 hover:font-semibold hover:text-blue-900 gap-2 sm:gap-6 items-center' target='_blank'  >
-                     <SiGooglemeet color='green' /><span>Meeting Link</span> 
+                  
+                  <div className='grid grid-cols-2 gap-2 my-2 items-center'>
+                    {event.event_type &&
+                    <h6 className='font-semibold'>{event.event_type}</h6>}
+                    <a href={event.rsvp} className='flex hover:font-semibold hover:text-blue-900 gap-2 sm:gap-3 items-center' target='_blank'  >
+                    <CgEventbrite /><span>RSVP</span> 
                     </a>
                   </div>
-                  }
+                  
 
                   {event.location &&
-                  <div className='flex flex-row items-center justify-between'>
-                    <h6 className='font-semibold'>Physical Session</h6>
-                    <a href="" className='flex text-blue-600 hover:font-semibold hover:text-blue-900 gap-6 items-center' target='_blank'  >
-                     <IoLocationOutline color='green' />
+                  <div className='flexsjustify-between gap-2 my-1'>
+                    {/* <h6 className='font-semibold'></h6> */}
+                    <a href="" className='grid grid-cols-2 text-blue-600 hover:font-semibold hover:text-blue-900 items-center' target='_blank'  >
+                     <p className="flex items-center gap-2"><IoLocationOutline color='green' /> <span>Location</span></p>
                      <span>Moringa School</span>
                     </a>
                   </div>
-                  }
-                  <div className='flex justify-between gap-2'>
+                  } 
+                  <div className='grid grid-cols-2 flexflex-row justify-between gap-2'>
                     <span className="rounded-md bg-gray-100 p-1 text-sm text-gray-500 dark:text-gray-300">
                       <FormatDate date={event.date} />
                     </span>

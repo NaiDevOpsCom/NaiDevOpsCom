@@ -28,13 +28,13 @@ class BlogViewSet(viewsets.ViewSet):
     def create(self, request): 
         serializer = self.serializer_class(data=request.data)            
         title = request.data.get('title')
-        file = request.data.get('file')
+        image = request.data.get('file')
         description =request.data.get('description')
-        video_link=request.data.get('video_link')
+        tag=request.data.get('tag')
     
         if serializer.is_valid():
             serializer.save(title=title,description=description,
-            file=file,video_link=video_link, user=request.user )
+            image=image,tag=tag, user=request.user )
             return Response({"success":"Saved successfully!!"},status=201)
 
         print(serializer.errors)

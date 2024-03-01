@@ -71,25 +71,20 @@ class PasswordResetToken(models.Model):
 
 class Event(models.Model):
     title = models.CharField( max_length=130) 
-    sub_title = models.CharField( max_length=150, blank=True)   
     description = models.TextField() 
-    price = models.FloatField( max_length=50) 
-    location = models.CharField( max_length=50, blank=True)   
-    meeting_link = models.CharField( max_length=150, blank=True)    
-    speakers = models.CharField(max_length=100) 
+    eventbrite_link = models.CharField( max_length=150, blank=True)    
     image =  models.FileField(upload_to='events/%Y:%m:%d', null=True)  
     date_posted = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     event_date = models.DateTimeField(max_length=100)
-    add_to_homepage = models.BooleanField(default=False)
-    regular_event = models.BooleanField(default=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # location = models.CharField( max_length=50, blank=True)     # speakers = models.CharField(max_length=100) 
 
 
 class Blog(models.Model):
     title = models.CharField( max_length=150) 
+    tag = models.CharField( max_length=50, default="DevOps Blogs") 
     description = models.TextField() 
-    video_link = models.CharField(max_length=150, blank=True) 
-    file =  models.FileField(upload_to='blogs/%Y:%m:%d', null=True)  
+    image =  models.FileField(upload_to='blogs/%Y:%m:%d', null=True)  
     date_posted = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 

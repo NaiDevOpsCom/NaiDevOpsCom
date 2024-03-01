@@ -8,6 +8,10 @@ export default {
     darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily: {
+      roboto: ['Roboto', "sans-serif"],
+      poppins: ['Poppins', "sans-serif"]
+    },
   },
   plugins: [
     require('flowbite/plugin'),

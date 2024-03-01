@@ -1,6 +1,7 @@
 import { createContext,useState, useEffect, useContext } from "react";
 import configData from "../config.json";
-import {toast} from "react-toastify"
+import {toast} from 'react-hot-toast';
+
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 export const BlogContext = createContext();
@@ -14,17 +15,15 @@ export const BlogProvider = ({ children }) =>
   const [onDataChange, setOnDataChange] = useState(true)
   const [loading, setLoading] = useState(true);
 
-  const authTokens = JSON.parse(sessionStorage.getItem("authTokens"));
+  const authToken =sessionStorage.getItem("authToken");
   const [posts, setPosts] = useState([]);
-
 
     // Add Post
     const addPost = (formData) => {
       fetch(`${SERVER_URL}/blogs`, {
         method: "POST",
         headers: {
-            // "Content-Type": "application/json", 
-            Authorization: `Bearer ${authTokens.access}`,
+            Authorization: `Bearer ${authToken}`,
         },
         body:formData ,
         })
@@ -34,8 +33,8 @@ export const BlogProvider = ({ children }) =>
         if (response.success) 
         {
           setOnDataChange(!onDataChange);
-          setPosts(response);
-          navigate("/admin/blogs", {replace:false});
+
+          navigate("/admin/blog", {replace:false});
         
           toast.success(response.success, { theme: "colored" })
         } 
@@ -45,7 +44,7 @@ export const BlogProvider = ({ children }) =>
         }
         else if(response.detail)
         {
-          setTimeout(() =>  toast.warning("Session expired!", { theme: "colored" }), 1000) 
+          setTimeout(() =>  toast.error("Session expired!", { theme: "colored" }), 1000) 
           logoutUser()
         }
         else
@@ -62,7 +61,7 @@ export const BlogProvider = ({ children }) =>
               method: "PATCH",
               headers: {
                   // "Content-Type": "application/json",
-                  Authorization: `Bearer ${authTokens.access}`
+                  Authorization: `Bearer ${authToken}`
               },
               body: formData,
               })
@@ -82,7 +81,7 @@ export const BlogProvider = ({ children }) =>
                 }
                 else if(response.detail)
                 {
-                  setTimeout(() =>  toast.warning("Session expired!", { theme: "colored" }), 1000) 
+                  setTimeout(() =>  toast.error("Session expired!", { theme: "colored" }), 1000) 
                   logoutUser()
                 }
                 else{
@@ -149,6 +148,7 @@ export const BlogProvider = ({ children }) =>
        })
        .then((response)=> response.json())
        .then((data)=>{
+        console.log("lll ", data);
           setPosts(data)
       })
 

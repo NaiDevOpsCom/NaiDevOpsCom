@@ -30,12 +30,9 @@ class PasswordResetSerializer(serializers.Serializer):
 class EventSerializer(serializers.ModelSerializer):
     user = serializers.CharField(required=False)
     title = serializers.CharField(required=False)
-    sub_title = serializers.CharField(required=False)    
     description = serializers.CharField(required=False)
-    meeting_link = serializers.CharField(required=False)
-    speakers = serializers.CharField(required=False)
+    eventbrite_link = serializers.CharField(required=False)
     event_date = serializers.CharField(required=False)
-    location = serializers.CharField(required=False)
     event_date = serializers.CharField(required=False)
     image = serializers.FileField(required=False)
 
@@ -45,8 +42,10 @@ class EventSerializer(serializers.ModelSerializer):
 
 class BlogSerializer(serializers.ModelSerializer):
     title = serializers.CharField(required=False)
+    tag = serializers.CharField(required=False)
     description = serializers.CharField(required=False)
-    user = serializers.CharField(required=False)
+    user = UserSerializer(required=False)
+    # serializers.CharField(required=False)
    
     class Meta:
         model = Blog

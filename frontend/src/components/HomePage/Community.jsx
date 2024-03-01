@@ -45,7 +45,7 @@ const Community = () => {
   );
 
   return (
-    <div className="sbg-community-bg flex flex-col justify-center my-12 xl:my-16">
+    <div className="lg:w-[70vw] mx-auto flex flex-col my-12 xl:my-16 ">
       <h1 className="text-2xl sm:text-4xl font-bold textx-white items-center justify-center text-center mb-8">
         Community Feedback</h1>
 
@@ -57,11 +57,11 @@ const Community = () => {
         infiniteLoop={true}
       >
         {chunkedCards.map((group, index) => (
-          <div key={index} className="grid grid-cols-2 sm:max-w-[60vw] mx-auto  ">
+          <div key={index} className="grid grid-cols-2 gap-2 sm:gap-16 mx-2  ">
             {group.map(({ name, title, description, rating, image }, cardIndex) => (
               <div
                 key={cardIndex}
-                className="bg-white p-2 sm:p-6 rounded-md shadow-xl flex flex-col items-center transform transition-transform hover:scale-105 mx-2 sm:mx-10 mb-16"
+                className="bg-white rounded-md shadow-xl flex flex-col items-center gap-16 transform transition-transform hover:scale-105 mb-16"
               >
                 {/* <RatingStars {...ratingOptions} size={10} value={rating} /> */}
                 <ReactStars
@@ -70,22 +70,24 @@ const Community = () => {
                   size={24}
                   value={rating}
                   activeColor="#ffd700"
-                />,
-                <div className="grid grid-cols-1 sm:grid-cols-2">
-                  {/* Image */}
-                  <div className='grid  justify-center'>
-                   <div className='border-1 w-36 h-36 rounded-full overflow-hidden'>
-                      <img className="h-36" src={image} alt="image description" />
+                />
+                <div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2">
+                    {/* Image */}
+                    <div className='grid  justify-center text-lg md:text-xl'>
+                      <div className='border-1 w-36 h-36 rounded-full overflow-hidden'>
+                        <img className="h-36" src={image} alt="image description" />
+                      </div>
+                    </div>
+                    <div className='flex items-center px-2'>
+                      <div className='mx-auto'>
+                        <div className="font-semibold mt-2 ">{name}</div>
+                        <div className=" text-gray-600 font-semibold">{title}</div>
+                      </div>
                     </div>
                   </div>
-                  <div className='flex items-center px-2'>
-                    <div className='mx-auto'>
-                      <div className="font-semibold mt-2">{name}</div>
-                      <div className=" text-gray-600 font-semibold text-sm">{title}</div>
-                    </div>
-                  </div>
-                  <div className="mt-2 text-gray-800 text-sm sm:text-medium mb-4">
-                   {description}
+                  <div className="mt-4 text-gray-800 text-medium sm:text-lg mb-4">
+                  {description}
                   </div>
                 </div>
               </div>

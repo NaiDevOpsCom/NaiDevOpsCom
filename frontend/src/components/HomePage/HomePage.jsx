@@ -38,40 +38,41 @@ const HomePage = () =>
 
   return (
     <>
-    <div className="grid grid-cols-1 container mx-auto md:grid-cols-2 items-center min-h-[70vh] p-3 sm:p-12 mt-14 relative">
+    <div className="grid md:w-[98%] grid-cols-1 container mx-auto md:grid-cols-2 items-center lg:w-[73vw] min-h-[70vh] dp-3 dsm:p-12 mt-14 relative">
   
       <div className="containerp-3">
         <div className="relative z-0">
           <img src={homeimage} alt="logo"
             className="block md:hidden h-[100vh]  object-cover md:cursor-pointer opacity-40"
-          />      
-          <div className="absolute top-1/2 left-1/2 sm:left-1/3 lg:sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm bg-opacity-50 p-2">
+          /> 
+          
+          <div className={`${window.innerWidth < 768 ? 'absolute top-1/2 left-1/2 sm:left-1/3 lg:sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-opacity-50 p-2'  : 'md:block' }`}>
             <div className="font-bold text-3xl md:text-3xl xl:text-5xl tracking-normal">
               <p className='whitespace-nowrap sm:whitespace-wrap'>Innovate, Empower</p>
               <p>Grow</p>
             </div>
-            <div className="my-6">
+            <div className="my-6 text-lg md:text-xl">
               <p>
                 Promoting Collaboration, Innovation and best <br />
                 practices within the DevOps industry in Nairobi and <br />
                 beyond.
               </p>
             </div>
-            <div className="flex flex-row justify-between gap-2 sm:gap-3 xl:gap-6 my-6">
-              <button type="button" className="whitespace-nowrap hidden lg:inline text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm sm:text-lg px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <div className="flex flex-row justify-between sm:w-[50%] gap-2 sm:gap-3 xl:gap-6 my-6">
+              <button type="button" className="whitespace-nowrap hidden lg:inline text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Join our community
               </button>
-              <button type="button" className="whitespace-nowrap inline lg:hidden text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm sm:text-lg px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <button type="button" className="whitespace-nowrap inline lg:hidden text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Join us
               </button>
-              <button type="button" className="whitespace-nowrap text-gray-900 bg-white border border-gray-500 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm sm:text-lg px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+              <button type="button" className="whitespace-nowrap text-gray-900 bg-white border border-gray-500 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-lg px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
                 Learn More
               </button>              
             </div>
           </div>
           </div>
       </div>       
-      <div className="hidden md:block flex overflow-hidden items-center justify-center">
+      <div className=" hidden md:block flex overflow-hidden items-center md:justify-end">
         <img
           src={homeimage}
           alt="logo"
@@ -124,8 +125,8 @@ const HomePage = () =>
 
 
     {/* Events */}
-    <div className='container mx-auto '>
-      <h1 className='font-bold text-center text-2xl sm:text-4xl xl:7xl my-4'>
+    <div className='container mx-auto lg:w-[70vw]'>
+      <h1 className='font-bold text-center text-2xl sm:text-3xl md:10xl my-4'>
         Devops Events</h1>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-14 sm:gap-0 justify-around px-12 py-6'>
         
@@ -172,10 +173,10 @@ const HomePage = () =>
     <div className='container mx-auto lg:w-[70vw] flex items-center min-h-[40vh] xl:my-12 shadow-xl'>
       <div className='grid  bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-2 gap-4 sm:gap-0 justify-around px-4 sm:px-12 py-16'>
         <div>
-          <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Our Partners</h1>
-          <p className='text-gray-800 my-3'>The collaboration and synergy among these partners in a DevOps community<br/>contribute to the successful implementation of DevOps principles. </p>
+          <h1 className='font-bold text-2xl sm:text-3xl md:10xl'>Our Partners</h1>
+          <p className='text-gray-800 text-lg md:text-xl my-3'>The collaboration and synergy among these partners in a DevOps community<br/>contribute to the successful implementation of DevOps principles. </p>
         </div>
-        <div className='grid grid-cols-2 items-center gap-6 lg:gap-16 sm:px-6 space-y-4'>
+        <div className='grid grid-cols-2 items-center justify-between gap-6 lg:gap-16 sm:px-6 space-y-4'>
           <div className='flex ,justify-center'>
             <img src={moringa} className="w-auto h-10 object-coverw" alt=""/>
           </div>        
@@ -200,18 +201,18 @@ const HomePage = () =>
 
 
           {/* Partners */}
-    <div className='container mx-auto ldg:w-[70vw]  min-h-[40vh] xl:my-12 shadow-xl'>
-      <div className='grid bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-3 sm:gap-8 dsm:gap-0 jcustify-around px-4 sm:px-12 py-3'>
+    <div className='container mx-auto lg:w-[70vw]  min-h-[40vh] xl:my-12 shadow-xl '>
+      <div className='grid bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-3 sm:gap-8 dsm:gap-0 px-2 sm:px-12 py-3'>
          <div className='flex items-center w-full p-4'>
            <img src={contactus} className="w-full m-5" alt=""/>
          </div>
-         <div className=' col-span-2 px-8'>
-            <div className="xmx-auto ">
+         <div className='col-span-2 px-1 sm:px-8'>
+            <div>
                   <div className="flex flex-col">
-                      <h2 className="mt-5  font-bold tracking-tight">FAQs</h2>
+                      <h2 className="mt-5 text-lg font-bold tracking-tight">FAQs</h2>
                       <p className="mt-3 font-bold text-lg md:text-xl xl:text-3xl">How Can we whelp you?    </p>
                   </div>
-                  <div className="mx-auto mt-8 grid divide-y divide-neutral-200">
+                  <div className="mx-auto text-lg md:text-xl mt-8 grid divide-y divide-neutral-200">
                       <div className="py-5">
                           <details className="group">
                               <summary className="flex cursor-pointer list-none items-center justify-between font-medium">

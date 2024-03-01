@@ -16,6 +16,8 @@ import Signup from "./admin/pages/Signup";
 import Blogs from "./admin/pages/Blogs";
 import Profile from "./admin/pages/Profile";
 import AdminEvents from "./admin/pages/AdminEvents";
+import { BlogProvider } from "./context/BlogContext";
+import SingleBlog from "./pages/SingleBlog";
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
   return (
     <BrowserRouter>
     <AuthProvider>
+      <BlogProvider>
       {/* <EventProvider> */}
         <Routes>
           <Route path='/' element={<Layout/>}>
@@ -32,6 +35,8 @@ function App() {
            <Route path='events' element={<Events />} />
            <Route path='partner' element={<Partner />} />
            <Route path='blog' element={<Blog />} />
+           <Route path="blog/:id" element={<SingleBlog />} />
+
            <Route path="*" element={<NoPage />} />
           </Route>
           <Route path='/admin/' element={<AdminLayout/>}>
@@ -44,6 +49,7 @@ function App() {
           </Route>
         </Routes>
         {/* </EventProvider> */}
+        </BlogProvider>
     </AuthProvider>
       </BrowserRouter>
   )
