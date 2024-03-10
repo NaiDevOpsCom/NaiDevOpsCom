@@ -87,10 +87,10 @@ class BlogViewSet(viewsets.ViewSet):
             blog = self.queryset.get(pk=pk)
     
             # Check first if the file exists before deleting from the directory
-            if os.path.exists(os.path.join(settings.MEDIA_ROOT, str(blog.file)) ):
-                os.remove(os.path.join(settings.MEDIA_ROOT, str(blog.file) ))
+            if os.path.exists(os.path.join(settings.MEDIA_ROOT, str(blog.image)) ):
+                os.remove(os.path.join(settings.MEDIA_ROOT, str(blog.image) ))
 
-                dir = os.path.join(settings.MEDIA_ROOT, ("/".join(str(blog.file).split("/",-2)[:2])) )
+                dir = os.path.join(settings.MEDIA_ROOT, ("/".join(str(blog.image).split("/",-2)[:2])) )
                 list_dir = os.listdir(dir)
                 print("Dir length ",len(list_dir))
                 if len(list_dir) == 0:

@@ -92,9 +92,9 @@ const AddBlog = () => {
                     <div className="flexflex-col mb-6">
                         <label className="flex justify-start mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Tag:</label>
                         <select value={tag || ""}  onChange={(e) => setTag(e.target.value)} className="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                          <option>Select</option>
-                          <option>DevOps Blogs</option>
-                          <option>Community News</option>
+                          <option value="">Select</option>
+                          <option value="DevOps Blogs">DevOps Blogs</option>
+                          <option value="Community News">Community News</option>
                         </select>
                     </div>
 

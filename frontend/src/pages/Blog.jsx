@@ -13,16 +13,20 @@ export default function Blog()
 { 
    const {posts} = useContext(BlogContext)
    const [activeTab, setActiveTab] = useState('All')
+
+   const filtered_posts = activeTab === 'All' ? posts : posts.filter(post => post.tag === activeTab);
+
+   console.log("popo ", filtered_posts);
 //  | 'DevOps Blogs' | 'Community News'
 
    const [itemOffset, setItemOffset] = useState(0);
    const endOffset = itemOffset + 10;
-   const currentItems = posts.slice(itemOffset, endOffset);
-   const pageCount = Math.ceil(posts.length / 10);
+   const currentItems = filtered_posts && filtered_posts.length>0 && filtered_posts.slice(itemOffset, endOffset);
+   const pageCount = Math.ceil(filtered_posts && filtered_posts.length / 10);
  
    // Invoke when user click to request another page.
    const handlePageClick = (event) => {
-     const newOffset = (event.selected * 10) % posts.length;
+     const newOffset = (event.selected * 10) % filtered_posts && filtered_posts.length;
      console.log(
        `User requested page number ${event.selected}, which is offset ${newOffset}`
      );
@@ -53,7 +57,7 @@ export default function Blog()
        {  currentItems && currentItems.map((post) => (
         <div className="lg:w-[70vw] mx-auto overflow-hidden  items-center grid grid-cols-1 md:grid-cols-2 mt-6 min-h-[40vh] md:border-gray-400 border dpx-2 py-4 sm:py-0 md:border-2 rounded-2xl">
 
-              <div className="mb-3 sm:p-8 flex flex-col justify-between leading-normal">
+              <div className="mb-3 px-2 sm:p-8 flex flex-col justify-between leading-normal">
                   <div className='flex items-center flex-1 '>
                       <div className="mb-8">
                       <div className="text-gray-900 font-bold  text-2xl sm:text-4xl mb-2">{post.title}</div>

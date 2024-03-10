@@ -7,7 +7,7 @@ import config from "../../config.json"
 
 export default function Blogs() 
 {
-  const {posts} = useContext(BlogContext)
+  const {posts,deleteBlog} = useContext(BlogContext)
 
 
   console.log(posts);
@@ -36,7 +36,7 @@ export default function Blogs()
                   loading="lazy"
                   decoding="async"
                   data-nimg="fill"
-                  className="object-cover transition-all"
+                  className="object-cover relative transition-all"
                   sizes="(max-width: 768px) 30vw, 33vw"
                   src={post.image==="/files/undefined"? blog : config.IMAGES_URL+post.image}
                   style={{
@@ -47,9 +47,14 @@ export default function Blogs()
                     color: 'transparent',
                   }}
                 />
-              </a>
+              </a>          
+              <div class="flex justify-between w-full group absolute bottom-0">
+                <button onClick={()=>deleteBlog(post.id)} class="text-white bg-red-600 hover:bg-red-500 px-3 py-1.5 rcounded-xl hidden group-hover:block">Delete</button>
+                <button class="text-white bg-green-600 hover:bg-green-500 px-3 py-1.5 rcounded-xl hidden group-hover:block">Update</button>
+              </div>
             </div>
-
+  
+            
             <div className="px-3 pb-4">
               <div>
                 <div className="flex gap-3">
@@ -95,7 +100,7 @@ export default function Blogs()
                           }}
                         />
                       </div>
-                      <span className="truncate text-sm">{post.user.username}</span>
+          <span className="truncate text-sm">{post.user.username}</span>
                     </div>
                   </a>
                   <span className="text-xs text-gray-300 dark:text-gray-600">

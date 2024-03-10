@@ -111,7 +111,7 @@ export const BlogProvider = ({ children }) =>
       method: "DELETE",
       headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${authTokens.access}`
+          Authorization: `Bearer ${authToken}`
       }
       })
       .then(response => response.json())
