@@ -4,10 +4,15 @@ export default function Partner() {
   return (
 
     <div className="lg:w-[70vw] grid md:grid-cols-2 mb-4 mx-auto bg-gray-100 justify-center items-center min-h-[80vh]">
-        <div className="flex items-center">
+        <div className="flex justify-center items-center">
            <img src={partners} alt="logo"
-            className=" object-cover "
+            className=" object-cover relative"
           /> 
+          <button type="button" class="absolute  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 md:text-lg font-medium rounded-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+            Donate to us
+          </button>
+
+
         </div>
         <div className="bg-white bg-clip-border shadow-3xl shadow shadow-500 dark:!bg-navy-800 dark:text-white dark:!shadow-none p-10">
             <div className="mt-2 mb-8 w-full ">

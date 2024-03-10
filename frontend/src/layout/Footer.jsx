@@ -20,7 +20,7 @@ const Footer = () =>
         <div className="mt-6 flex flex-wrap sm:max-w-md gap-x-4 ">
           {/* <label htmlFor="email-address" className="sr-only">Email address</label> */}
           <input type="emaip-5 bg-red-900l" autoComplete="email" required className="min-w-0 mb-2 flex-auto rounded-md border-0 bg-white px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Enter your email" />
-          <button type="submit" className="flex-none mb-2 rounded-md bg-yellow-400 px-3.5 py-2.5 text-lg md:text-xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
+          <button type="submit" className="flex-none mb-2 rounded-md bg-yellow-400 px-3.5 py-2.5 text-sm md:text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
         </div>
       </div>
       </div>
@@ -39,7 +39,7 @@ const Footer = () =>
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
         <img src={devOpsLogo} className="mr-5 h-14 sm:h-14" alt="logo" />
-        <p className="max-w-xs mt-4 text-lg md:text-xl text-gray-600">
+        <p className="max-w-xs mt-4 text-sm md:text-lg text-gray-600">
           Invest and Partner with us. Well reknown devops engineers in Nairobi and EA
          </p>
         <div className="flex mt-8 space-x-6 text-gray-600">
@@ -47,24 +47,28 @@ const Footer = () =>
 
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="lg:order-first sm:order-last hidden lg:block">
+szvdz
+      </div>
         <div>
-          <nav className="flex flex-col mt-4 space-y-2 text-lg md:text-xl text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm md:text-lg text-gray-500">
             <a className="hover:opacity-75" href=""> Home </a>
             <a className="hover:opacity-75" href=""> About </a>
             <a className="hover:opacity-75" href=""> Events </a>
             <a className="hover:opacity-75" href=""> Meet the Team </a>
           </nav>
         </div>
+
         <div>
-          <nav className="flex flex-col mt-4 text-lg md:text-xl space-y-2  text-gray-500">
+          <nav className="flex flex-col mt-4 text-sm md:text-lg space-y-2  text-gray-500">
             <a className="hover:opacity-75" href=""> Hire us </a>
             <Link to="/partner" className="hover:opacity-75" > Partner with us </Link>
             <a className="hover:opacity-75" href=""> Careers </a>
           </nav>
         </div>
         <div classNamee="flex bg-red-900 justify-end">
-          <nav className="flex flex-col mt-4 space-y-2 text-lg md:text-xl text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm md:text-lg text-gray-500">
             <a className="hover:opacity-75" href="/"> FAQs </a>
             <a className="hover:opacity-75" href="/"> Activities</a>
             <a className="hover:opacity-75" href="/"> 0721 234 567</a>
@@ -74,7 +78,7 @@ const Footer = () =>
         </div>
       </div>
     </div>
-    <p className="mt-8 text-gray-800 text-lg md:text-xl">
+    <p className="mt-8 text-gray-800 text-sm md:text-lg">
       © 2024 DevOps
     </p>
   </div>

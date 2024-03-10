@@ -57,11 +57,11 @@ const Community = () => {
         infiniteLoop={true}
       >
         {chunkedCards.map((group, index) => (
-          <div key={index} className="grid grid-cols-2 gap-2 sm:gap-16 mx-2  ">
+          <div key={index} className="grid sm:grid-cols-2 gap-2 sm:gap-16 mx-2  ">
             {group.map(({ name, title, description, rating, image }, cardIndex) => (
               <div
                 key={cardIndex}
-                className="bg-white rounded-md shadow-xl flex flex-col items-center gap-16 transform transition-transform hover:scale-105 mb-16"
+                className="bg-white rounded-md shadow-xl flex flex-col items-center gap-16 transform transition-transform hover:scale-105 mb-16 mx-2 sm:mx-2"
               >
                 {/* <RatingStars {...ratingOptions} size={10} value={rating} /> */}
                 <ReactStars

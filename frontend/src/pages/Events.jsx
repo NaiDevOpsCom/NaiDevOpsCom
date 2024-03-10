@@ -108,19 +108,19 @@ const Events = () => {
         {
             filteredEvents && filteredEvents.length<1?
             <>
-            <div className="mb-18 min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
+            <div className="mb-18 min-h-[40vh] items-center mb-16 lg:gap-12 grid gap-16 md:grid-cols-2 grid-cols-1">
               <div className="flex justify-center ">
                 <div>
                   <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Weekly Online Events</h1>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
+                  <p className='text-gray-800 text-lg font-thin my-3'>
                   Explore a world of knowledge at our weekly online events, where community experts generously share their insights. Join us to discover a diverse array of DevOps tools and technologies, designed to enlighten both newcomers and seasoned professionals in the field.
                  </p>
-              </div>
+                </div>
               </div>
               
-              <div className='flex zp-8 overflow-hidden justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
+              <div className='flex zp-8 overflow-hidden justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
-                    className="object-cover w-full rounded-lg dxl:w-64"
+                    className="object-cover h-full rounded dxl:w-64"
                     src={image1}
                     alt=""
                   />
@@ -130,38 +130,37 @@ const Events = () => {
             
 
 
-            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
-
-              <div className="flex justify-center">
-                <div>
-                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Monthly Physical Workshops</h1>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
-                  Embark on a journey of learning at our monthly workshops, where community experts generously share their knowledge. Immerse yourself in diverse DevOps tools and technologies, tailored to enlighten both newcomers and seasoned professionals. Beyond the enriching educational experience, these workshops also serve as invaluable networking opportunities for professionals in the field.                 </p>
-              </div>
-              </div>
-
-              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-12 grid gap-16 md:grid-cols-2 grid-cols-1">
+              <div className='flex order-last md:order-first zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
-                    className="object-cover w-full rounded-lg dxl:w-64"
+                    className="object-cover h-full w-full rounded dxl:w-64"
                     src={image2}
                     alt=""
                   />
                   
               </div>
+              <div className="flex justify-center">
+                <div>
+                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Monthly Physical Workshops</h1>
+                  <p className='text-gray-800 text-lg font-thin my-3'>
+                  Embark on a journey of learning at our monthly workshops, where community experts generously share their knowledge. Immerse yourself in diverse DevOps tools and technologies, tailored to enlighten both newcomers and seasoned professionals. Beyond the enriching educational experience, these workshops also serve as invaluable networking opportunities for professionals in the field.                 </p>
+              </div>
+              </div>
+
             </div>
 
-            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-12 grid gap-16 md:grid-cols-2 grid-cols-1">
               <div className="flex justify-center">
                 <div>
                   <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Campus Tours</h1>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
+                  <p className='text-gray-800 text-lg font-thin my-3'>
                   We are evangelizing DevOps through educational outreach, our campus tours span across various universities in Kenya. With a focus on introducing tech students to the dynamic realm of technology, we aim to inspire them to consider it as a promising career path. These sessions not only provide valuable insights but also offer mentorship, empowering students on their journey into the exciting world of technology. Join us in shaping the future of aspiring tech professionals.
                  </p>
               </div>
               </div>
-              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
+              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
-                    className="object-cover w-full rounded-lg dxl:w-64"
+                    className="object-cover h-full rounded dxl:w-64"
                     src={image3}
                     alt=""
                   />
@@ -170,40 +169,41 @@ const Events = () => {
             </div>
 
 
-            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
-              <div className="flex justify-center">
-                <div>
-                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Africa Devops Summit</h1>
-                  <div>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
-                  The Africa DevOps Summit, formerly the Nairobi DevOps Summit – an event that we launched in September 2023 – has expanded its horizons to bring you a continent-wide celebration of collaboration, innovation, and best practices in DevOps. Starting in 2024, the Africa DevOps Summit will make its way to cities across the continent, connecting DevOps professionals, enthusiasts, and tech communities. This event provides an opportunity for new DevOps tools and technologies to be showcased, new trends to be shared, experts to share their knowledge, and a platform for DevOps engineers to learn.
-                  </p>
-                 </div>
-              </div>
-              </div>
-              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-12 grid gap-16 md:grid-cols-2 grid-cols-1">
+              <div className='flex order-last md:order-first zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
-                    className="object-cover w-full rounded-lg dxl:w-64"
+                    className="object-cover h-full rounded dxl:w-64"
                     src={image4}
                     alt=""
                   />
                   
               </div>
+              <div className="flex justify-center">
+                <div>
+                  <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Africa Devops Summit</h1>
+                  <div>
+                  <p className='text-gray-800 text-lg font-thin my-3'>
+                  The Africa DevOps Summit, formerly the Nairobi DevOps Summit – an event that we launched in September 2023 – has expanded its horizons to bring you a continent-wide celebration of collaboration, innovation, and best practices in DevOps. Starting in 2024, the Africa DevOps Summit will make its way to cities across the continent, connecting DevOps professionals, enthusiasts, and tech communities. This event provides an opportunity for new DevOps tools and technologies to be showcased, new trends to be shared, experts to share their knowledge, and a platform for DevOps engineers to learn.
+                  </p>
+                 </div>
+              </div>
+              </div>
+
             </div>
 
 
-            <div className="min-h-[40vh] items-center mb-16 lg:gap-8 grid gap-16 md:grid-cols-2 grid-cols-1">
+            <div className="min-h-[40vh] items-center mb-16 lg:gap-12 grid gap-16 md:grid-cols-2 grid-cols-1">
               <div className="flex justify-center">
                 <div>
                   <h1 className='font-bold text-2xl sm:text-3xl xl:text-5xl'>Fun and Networking Events</h1>
-                  <p className='text-gray-800 text-xl font-thin my-3'>
+                  <p className='text-gray-800 text-lg font-thin my-3'>
                   Join us for our engaging and networking events, where we venture to diverse locations to provide community members with opportunities to learn, have fun, and network. Our activities range from insightful data center visits to invigorating hiking adventures and team-building activities. Explore with us as we blend knowledge, enjoyment, and connection in unique and exciting settings.
                  </p>
               </div>
               </div>
-              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw]'>
+              <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
-                    className="object-cover w-full rounded-lg dxl:w-64"
+                    className="object-cover h-full rounded dxl:w-64"
                     src={image1}
                     alt=""
                   />

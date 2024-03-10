@@ -90,9 +90,6 @@ export default function Blog()
           </div>
           ))}
 
-
-
-{/* 
                 
        <div className="lg:w-[70vw] mx-auto overflow-hidden  items-center grid grid-cols-1 md:grid-cols-2 mt-6 min-h-[40vh] md:border-gray-400 border px-2 py-4 sm:py-0 md:border-2 rounded-2xl">
         <div className="mb-3 sm:p-8 flex flex-col justify-between leading-normal">
@@ -136,7 +133,8 @@ export default function Blog()
         <div className="flex items-center md:h-[30vh] rounded-t lg:rounded-t-none lg:rounded-l text-center" title="Blog">
           <img src={blog} className='w-full' alt='blog' />
         </div>
-        </div> */}
+        </div> 
+
       </div>
 
 

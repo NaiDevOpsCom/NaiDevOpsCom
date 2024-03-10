@@ -72,7 +72,7 @@ const HomePage = () =>
           </div>
           </div>
       </div>       
-      <div className=" hidden md:block flex overflow-hidden items-center md:justify-end">
+      <div className=" hidden md:block kflex overflow-hidden items-center md:justify-end">
         <img
           src={homeimage}
           alt="logo"
@@ -82,20 +82,20 @@ const HomePage = () =>
     </div>
 
 
-    <div className='container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-14 sm:gap-0 justify-around px-12 py-6'>
-       <div className='flex flex-col items-center justify-center sm:gap-4'>
+    <div className='container lg:w-[73vw] mx-auto grid grid-cols-1 sm:grid-cols-3 gaps-4 gap-14 sm:gap-8 justify-around spx-12 py-6'>
+       <div className='flex flex-col items-center justify-center gap-2 sm:gap-4 rounded-xl p-8 mx-8 md:mx-0 shadow-lg  border'>
           <h1 className='font-bold text-4xl sm:text-4xl md:10xl'>
             + <CountUp start={0}  end={2500} duration={2.75}/>
           </h1>
           <p className='font-semibold text-nowrap text-lg sm:text-xl'>Community Members</p>
        </div>
-       <div className='flex flex-col items-center justify-center gap-2 sm:gap-4'>
+       <div className='flex flex-col items-center justify-center gap-2 sm:gap-4 rounded-xl p-8 mx-8 md:mx-0 shadow-lg  border'>
           <h1 className='font-bold text-4xl sm:text-3xl md:9xl'>
             + <CountUp start={0}  end={25} duration={2}/>
           </h1>
           <p className='font-semibold text-lg sm:text-xl'>Events</p>
        </div>
-       <div className='flex flex-col items-center justify-center gap-2 sm:gap-4'>
+       <div className='flex flex-col items-center justify-center gap-2 sm:gap-4 rounded-xl p-8 mx-8 md:mx-0 shadow-lg  border'>
           <h1 className='font-bold text-4xl sm:text-3xl md:9xl'>
             + <CountUp start={0}  end={20} duration={2}/>
           </h1>
@@ -203,7 +203,7 @@ const HomePage = () =>
           {/* Partners */}
     <div className='container mx-auto lg:w-[70vw]  min-h-[40vh] xl:my-12 shadow-xl '>
       <div className='grid bg-gray-100 rounded-lg mx-2 sm:bg-white grid-cols-1 md:grid-cols-3 sm:gap-8 dsm:gap-0 px-2 sm:px-12 py-3'>
-         <div className='flex items-center w-full p-4'>
+         <div className='hidden md:flex items-center w-full p-4'>
            <img src={contactus} className="w-full m-5" alt=""/>
          </div>
          <div className='col-span-2 px-1 sm:px-8'>

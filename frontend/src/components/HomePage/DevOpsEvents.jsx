@@ -10,7 +10,7 @@ const DevOpsEvents = () => {
      
       <div className="grid grid-cols-1 sm:grid-cols-3 justify-around sm:justify-center items-center sm:space-x-8 mb-8 p-8 px-16">
         <div className="flex flex-col items-center border-b pb-4 px-2 mb-4 rounded-xl shadow-xl ">
-          <img
+          <img 
             src={twitterspace}
             alt="Twitter space logo"
             className="w-16 h-16 mb-2"
