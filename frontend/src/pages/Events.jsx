@@ -3,10 +3,11 @@ import { CgEventbrite } from "react-icons/cg";
 import { IoLocationOutline } from 'react-icons/io5';
 import CountdownTimer from '../components/utils/CountdownTimer';
 import FormatDate from '../components/utils/FormatDate';
-import image1 from "../images/events/image1.jpg"
+import online from "../images/events/online.jpeg"
 import image2 from "../images/events/image2.jpg"
-import image3 from "../images/events/image3.jpg"
-import image4 from "../images/events/image4.jpg"
+import image3 from "../images/events/image3.jpeg"
+import fun from "../images/events/fun.jpeg"
+import summit from "../images/events/summit.jpeg"
 
 
 const Events = () => {
@@ -120,8 +121,8 @@ const Events = () => {
               
               <div className='flex zp-8 overflow-hidden justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
-                    className="object-cover h-full rounded dxl:w-64"
-                    src={image1}
+                    className="object-cover h-full w-full rounded dxl:w-64"
+                    src={online}
                     alt=""
                   />
                   
@@ -173,7 +174,7 @@ const Events = () => {
               <div className='flex order-last md:order-first zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
                     className="object-cover h-full rounded dxl:w-64"
-                    src={image4}
+                    src={summit}
                     alt=""
                   />
                   
@@ -204,7 +205,7 @@ const Events = () => {
               <div className='flex zp-8 overflow-hidden justify-e items-center sm:h-[60vh] md:h-[30vh] lg:h-[50vh] c-[100vw] slg:w-[70vw] shadow-xl border p-3'>
                 <img
                     className="object-cover h-full rounded dxl:w-64"
-                    src={image1}
+                    src={fun}
                     alt=""
                   />
                   
@@ -225,7 +226,7 @@ const Events = () => {
             filteredEvents.map((event) => (
               <div key={event.id} className="xl:flex shadow-xl overflow-hidden ">
                 <img
-                  className="object-cover w-full rounded-lg xl:w-64 max-h-[30vh]"
+                  className="object-cover p-2 w-full rounded-lg xl:w-64 max-h-[30vh]"
                   src={image2}
                   alt=""
                 />

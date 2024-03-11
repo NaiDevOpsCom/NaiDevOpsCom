@@ -6,12 +6,42 @@ import moment from 'moment'; // Import the moment library for date formatting
 import ReactPaginate from 'react-paginate';
 import ReadMore from "../components/utils/ReadMore";
 import { Link } from "react-router-dom";
-
+import learndevops from "../images/blogs/learndevops.webp"
+import ansible from "../images/blogs/ansible.webp"
+import jenkins from "../images/blogs/jenkins.webp"
 
 
 export default function Blog() 
 { 
-   const {posts} = useContext(BlogContext)
+  //  const {posts} = useContext(BlogContext)
+
+  const posts = [{
+    title: "How To Get Started Learning DevOps in 2024",
+    description: "In the ever-evolving landscape of technology, DevOps continues to play a pivotal role in streamlining software development and operations. As we step into 2024,",
+    image: learndevops,
+    time: "4 minute read",
+    date_posted: "Jan 8, 2024",
+    tag:"DevOps Blogs"
+  },
+  {
+    title: "Ansible: Comprehensive Components",
+    description: "Ansible, an open-source automation tool, provides a comprehensive set of components that simplify configuration management, deployment,",
+    image: ansible,
+    time: "11 minute read",
+    date_posted: "Jul 11, 2023",
+    tag:"DevOps Blogs"
+  },
+  {
+    title: "Jenkins: Getting Started With Jobs",
+    description: "In Jenkins, a job refers to a task or a set of tasks that are executed by Jenkins automation server. It is a fundamental unit of work in Jenkins and",
+    image: jenkins,
+    time: "4 minute read",
+    date_posted: "Jun 20, 2023",
+    tag:"DevOps Blogs"
+  },
+
+]
+
    const [activeTab, setActiveTab] = useState('All')
 
    const filtered_posts = activeTab === 'All' ? posts : posts.filter(post => post.tag === activeTab);
@@ -32,6 +62,7 @@ export default function Blog()
      );
      setItemOffset(newOffset);
    };
+
 
   return (
     <div className='container mx-auto mcx-4 sm:px-0 my-6'>
@@ -54,16 +85,26 @@ export default function Blog()
         <hr/>
         
        <div className="px-4 min-h-[80vh]">
+        {!currentItems &&
+        <div className="flex justify-center mt-8">
+          <button class="p-4 my-4 text-sm text-center text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+            No item in this section!
+          </button>
+          </div>
+        }
        {  currentItems && currentItems.map((post) => (
-        <div className="lg:w-[70vw] mx-auto overflow-hidden  items-center grid grid-cols-1 md:grid-cols-2 mt-6 min-h-[40vh] md:border-gray-400 border dpx-2 py-4 sm:py-0 md:border-2 rounded-2xl">
+        <div className="lg:w-[70vw] mx-auto overflow-hidden  items-center grid grid-cols-1 md:grid-cols-2 mt-6 xl:min-h-[40vh] md:border-gray-400 border dpx-2 py-4 sm:py-0 md:border-2 rounded-2xl">
 
               <div className="mb-3 px-2 sm:p-8 flex flex-col justify-between leading-normal">
                   <div className='flex items-center flex-1 '>
                       <div className="mb-8">
-                      <div className="text-gray-900 font-bold  text-2xl sm:text-4xl mb-2">{post.title}</div>
-                      <Link to={`/blog/${post.id}`} className="text-gray-700 text-lg md:text-xl">
+                      <div className="text-gray-900 font-bold  text-2xl xl:text-4xl mb-2">{post.title}</div>
+                      {/* <Link to={`/blog/${post.id}`} className="text-gray-700 text-lg md:text-xl">
                         <ReadMore text={post.description} />
-                      </Link>
+                      </Link> */}
+                      <a href="https://medium.com/@kadimasam/how-to-get-started-learning-devops-in-2024-fd289cbfd39c" target="_blank">
+                         <ReadMore text={post.description} />
+                      </a>
                       </div>
                   </div>
                   <div className="flex text-sm justify-between items-center mx-3  sm:mx-8">
@@ -85,12 +126,13 @@ export default function Blog()
                   </div>
               </div>
               <div className="flex items-center  md:h-[30vh] rounded-t lg:rounded-t-none lg:rounded-l text-center" title="Blog">
-                <img src={post.image==="/files/undefined"? blog : config.IMAGES_URL+post.image} className='w-full bg-blue-300' alt='blog' />
+                <img src={post.image} className='w-full bg-blue-300' alt='blog' />
+                {/* <img src={post.image==="/files/undefined"? blog : config.IMAGES_URL+post.image} className='w-full bg-blue-300' alt='blog' /> */}
               </div>
           </div>
           ))}
 
-                
+         {/*        
        <div className="lg:w-[70vw] mx-auto overflow-hidden  items-center grid grid-cols-1 md:grid-cols-2 mt-6 min-h-[40vh] md:border-gray-400 border px-2 py-4 sm:py-0 md:border-2 rounded-2xl">
         <div className="mb-3 sm:p-8 flex flex-col justify-between leading-normal">
             <div className='flex items-center flex-1 '>
@@ -139,7 +181,7 @@ export default function Blog()
 
 
 
-  {/* <div className="container mx-auto my-16 max-w-screen-xl npx-4 w-full">
+  <div className="container mx-auto my-16 max-w-screen-xl npx-4 w-full">
 
     <div className="grid justify-around mw-full sm:grid-cols-2 xl:grid-cols-3 gap-8">
 
@@ -273,8 +315,8 @@ export default function Blog()
       </div>
       
       
-    </div>
-  </div> */}
+    </div>*/}
+  </div> 
 
   {/* Pagination */}
   <nav className='flex items-center justify-center my-8 '>

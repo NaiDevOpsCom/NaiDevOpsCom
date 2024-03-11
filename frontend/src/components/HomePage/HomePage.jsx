@@ -2,7 +2,7 @@ import Community from "./Community";
 import YouTube from 'react-youtube';
 import CountUp from 'react-countup';
 
-import homeimage from '../../assets/homeimage.jpg';
+import homeimage from '../../assets/homeimage.jpeg';
 import moringa from '../../images/partners/moringa.png'
 import devligence from '../../images/partners/devligence.png'
 import devopsdays from '../../images/partners/devopsdays.png'
@@ -38,7 +38,7 @@ const HomePage = () =>
 
   return (
     <>
-    <div className="grid md:w-[98%] grid-cols-1 container mx-auto md:grid-cols-2 items-center lg:w-[73vw] min-h-[70vh] dp-3 dsm:p-12 mt-14 relative">
+    <div className="grid md:w-[85%] grid-cols-1 container mx-auto md:grid-cols-2 items-center lg:w-[85vw] xl:w-[85vw] 2xl:w-[73vw] min-h-[70vh] dp-3 dsm:p-12 mt-14 relative">
   
       <div className="containerp-3">
         <div className="relative z-0">
@@ -51,10 +51,10 @@ const HomePage = () =>
               <p className='whitespace-nowrap sm:whitespace-wrap'>Innovate, Empower</p>
               <p>Grow</p>
             </div>
-            <div className="my-6 text-lg md:text-xl">
+            <div className="w-[80%] my-6 text-lg md:text-xl">
               <p>
-                Promoting Collaboration, Innovation and best <br />
-                practices within the DevOps industry in Nairobi and <br />
+                Promoting Collaboration, Innovation and best
+                practices within the DevOps industry in Nairobi and
                 beyond.
               </p>
             </div>
@@ -76,7 +76,7 @@ const HomePage = () =>
         <img
           src={homeimage}
           alt="logo"
-          className="max-w-2xl"
+          className="xmax-w-2xl"
         />
       </div>
     </div>
@@ -213,7 +213,7 @@ const HomePage = () =>
                       <p className="mt-3 font-bold text-lg md:text-xl xl:text-3xl">How Can we whelp you?    </p>
                   </div>
                   <div className="mx-auto text-lg md:text-xl mt-8 grid divide-y divide-neutral-200">
-                      <div className="py-5">
+                      <div className="py-3">
                           <details className="group">
                               <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                   <span>How can i join the community?</span>
@@ -225,7 +225,7 @@ const HomePage = () =>
                                           </svg>
                                       </span>
                               </summary>
-                              <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
+                              <p className="group-open:animate-fadeIn mt-1 text-neutral-600">
                                  You can follow or reach out to the community on by clicking on these links ;
                                  <a href='https://www.linkedin.com/groups/9351099/' className='font-semibold hover:text-blue-500' target='_blank'> LinkedIn</a>, 
                                  <a href='https://discord.com/invite/z6R6przNt9' className='font-semibold hover:text-blue-500' target='_blank'>Discord</a> or 
@@ -235,7 +235,7 @@ const HomePage = () =>
                               </p>
                           </details>
                       </div>
-                      <div className="py-5">
+                      <div className="py-3">
                           <details className="group">
                               <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                   <span> Are there any membership fees?</span>
@@ -247,12 +247,12 @@ const HomePage = () =>
                                           </svg>
                                       </span>
                               </summary>
-                              <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
+                              <p className="group-open:animate-fadeIn mt-1 text-neutral-600">
                                  It's Free. Nairobi Devops Community does not charge any membership fee.
                               </p>
                           </details>
                       </div>
-                      <div className="py-5">
+                      <div className="py-3">
                           <details className="group">
                               <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                   <span> How can I attend Nairobi Devops Events?</span>
@@ -264,7 +264,7 @@ const HomePage = () =>
                                           </svg>
                                       </span>
                               </summary>
-                              <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
+                              <p className="group-open:animate-fadeIn mt-1 text-neutral-600">
                                 All our events are open to all. Click 
                                  <a href='https://www.eventbrite.com/o/nairobi-devops-commuity-67065967383' className='font-semibold hover:text-blue-500' target='_blank'> 
                                   here </a>
@@ -273,7 +273,7 @@ const HomePage = () =>
                               </p>
                           </details>
                       </div>
-                      <div className="py-5">
+                      <div className="py-3">
                           <details className="group">
                               <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                   <span> Is the community only for DevOps proffessionals?</span>
@@ -285,12 +285,12 @@ const HomePage = () =>
                                           </svg>
                                       </span>
                               </summary>
-                              <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
+                              <p className="group-open:animate-fadeIn mt-1 text-neutral-600">
                                  Our community comprises of everyone who is involved in all modern technology fields. Software Developers, Data Scientists, IOT, Systems security specialists, Product Managers, UI/UX Designers, Devops Professionals, Technical Writers and many others.
                               </p>
                           </details>
                       </div>
-                      <div className="py-5">
+                      <div className="py-3">
                           <details className="group">
                               <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                   <span> Can my organisation partner with Nairobi Devops?</span>
@@ -302,7 +302,7 @@ const HomePage = () =>
                                           </svg>
                                       </span>
                               </summary>
-                              <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
+                              <p className="group-open:animate-fadeIn mt-1 text-neutral-600">
                                 Yes. The Nairobi Devops Community will be happy to partner with your organisation and any other like-minded open-source community, tech startup or corporate looking to bring positive change to Technology in Kenya and beyond.                              
                               </p>
                           </details>

@@ -136,12 +136,18 @@ return (
 <div className="container my-24 px-4 sm:px-8 md:mx-auto md:px-6 ">
   <div className="min-h-[40vh] items-center lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 grid-cols-1">
       <div className="flex justify-center">
-        <div>
+        <div className="px-4">
           <h1 className='font-bold text-2xl sm:text-3xl xl:text-6xl'>Our Story</h1>
-          <p className='text-gray-800 text-lg md:text-xl font-thin my-3'>The Nairobi DevOps Community is led by a group of<br/>
+          <p className='text-gray-800 text-lg md:text-xl font-thin my-3'>
+          Established on April 15, 2023, by Samuel Kadima, the Nairobi DevOps Community quickly
+          garnered support from a dedicated group of individuals who shared a profound passion
+          for advancing the DevOps industry in Nairobi and beyond. Since its inception, the committed 
+          team has significantly surpassed expectations, contributing to the remarkable growth and influence of the community.
+            {/* The Nairobi DevOps Community is led by a group of<br/>
           dedicated individuals who are passionate about<br/>promoting the growth and success of the DeOps<br/>
           industry in Nairobi and beyond. Our leadership team<br/>
-          is composed of experienced professionals from<br/>tech field</p>
+          is composed of experienced professionals from<br/>tech field*/}
+          </p> 
       </div>
       </div>
      <div className='flex p-8 flex-col justify-center items-center sm:h-[60vh] md:h-[30vh] lg:h-[40vh] c-[100vw] slg:w-[70vw] mt-8'>

@@ -1,3 +1,4 @@
+import Donate from "../components/Donate"
 import partners from "../images/partners.png"
 
 export default function Partner() {
@@ -8,9 +9,12 @@ export default function Partner() {
            <img src={partners} alt="logo"
             className=" object-cover relative"
           /> 
-          <button type="button" class="absolute  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 md:text-lg font-medium rounded-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+          {/* <button type="button" class="absolute  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 md:text-lg font-medium rounded-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
             Donate to us
-          </button>
+          </button> */}
+          <div class="absolute">
+             <Donate/>
+          </div>
 
 
         </div>

@@ -48,11 +48,11 @@ const Footer = () =>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-      <div className="lg:order-first sm:order-last hidden lg:block">
-szvdz
+      <div className="order-last lg:order-first  hidden lg:block">
+
       </div>
         <div>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm md:text-lg text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-smd text-gray-500">
             <a className="hover:opacity-75" href=""> Home </a>
             <a className="hover:opacity-75" href=""> About </a>
             <a className="hover:opacity-75" href=""> Events </a>
@@ -61,18 +61,18 @@ szvdz
         </div>
 
         <div>
-          <nav className="flex flex-col mt-4 text-sm md:text-lg space-y-2  text-gray-500">
+          <nav className="flex flex-col mt-4 text-smd space-y-2  text-gray-500">
             <a className="hover:opacity-75" href=""> Hire us </a>
             <Link to="/partner" className="hover:opacity-75" > Partner with us </Link>
             <a className="hover:opacity-75" href=""> Careers </a>
           </nav>
         </div>
         <div classNamee="flex bg-red-900 justify-end">
-          <nav className="flex flex-col mt-4 space-y-2 text-sm md:text-lg text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-smd text-gray-500">
             <a className="hover:opacity-75" href="/"> FAQs </a>
             <a className="hover:opacity-75" href="/"> Activities</a>
-            <a className="hover:opacity-75" href="/"> 0721 234 567</a>
-            <a className="hover:opacity-75" href="/"> contact-us@naidevops.com</a>
+            <a className="hover:opacity-75" href="/"> 0713 099 605</a>
+            <a className="hover:opacity-75" href="/"> info@nairobidevops.org</a>
 
           </nav>
         </div>
